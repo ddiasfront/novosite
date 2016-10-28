@@ -5998,7 +5998,8 @@ html {
   padding: 0px 20px 00px 60px; }
   @media screen and (max-width: 460px) {
     .header-unit {
-      padding: 0 20px 00px 30px; } }
+      padding: 0 20px 00px 30px;
+      height: 90vh; } }
 
 #video-container {
   position: absolute; }

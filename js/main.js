@@ -135,11 +135,20 @@ $(window).on("load resize",function(e) {
       }
     });
   });
+
+      $(".centered-navigation ul li.nav-link a").click(function(){
+        $(".centered-navigation ul li.nav-link a div , .centered-navigation ul li.nav-link a div ").removeClass("hovered");
+        $(".centered-navigation ul li.nav-link a:focus div , .centered-navigation ul li.nav-link a:hover div ").toggleClass("hovered");
+            $("#js-centered-navigation-menu").slideToggle(function(){
+      if($("#js-centered-navigation-menu").is(":hidden")) {
+        $("#js-centered-navigation-menu").removeAttr("style");
+      }
+    });
+
+        
+    });
 }); 
 
 
 
-$(".centered-navigation ul li.nav-link a").click(function(){
-    $(".centered-navigation ul li.nav-link a div , .centered-navigation ul li.nav-link a div ").removeClass("hovered");
-    $(".centered-navigation ul li.nav-link a:focus div , .centered-navigation ul li.nav-link a:hover div ").toggleClass("hovered");
-});
+
