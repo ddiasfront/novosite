@@ -37,8 +37,6 @@ gulp.task('htmlPipe', function() {
    .pipe(gulp.dest('dist'));
 });
 
-
-
 gulp.task('watchFiles', function() {
 	gulp.watch('scss/**/*.scss', ['compileSass', 'minifyCSS']);
 	gulp.watch('js/*.js', ['minifyScripts']);
