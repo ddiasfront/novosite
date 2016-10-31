@@ -3,122 +3,142 @@
 <head>
   <title>REF+T - Art&Science</title>
   <link rel="stylesheet" type="text/css" href="application.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,6z00,600i,700,700i,900,900i" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8"/>
 </head>
 <body>
 
 <div id="wrapper">
 
-<header class="centered-navigation" role="banner">
-  <div class="centered-navigation-wrapper">
-    <a href="javascript:void(0)" class="mobile-logo">
-      <img src="img/logo.png" alt="Logo image">
-    </a>
-    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-    <nav role="navigation">
-      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-        <li class="nav-link"><a href="javascript:void(0)"> <div class="i-menu homei"></div>HOME</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">  <div class="i-menu agenciai"></div>A AGÊNCIA</a></li>
-        <li class="nav-link"><a href="javascript:void(0)"><div class="i-menu trabalhosi"></div>TRABALHOS</a></li>
-        <li class="nav-link"><a href="javascript:void(0)"><div class="i-menu lideresi"></div>LÍDERES</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">  <div class="i-menu clientesi"></div>CLIENTES</a></li>
-        <li class="nav-link"><a href="javascript:void(0)"> <div class="i-menu vagasi"></div>VAGAS</a></li>
-        <li class="nav-link"><a href="javascript:void(0)"><div class="i-menu contatoi"></div>CONTATO</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <section id="menumobile">
+    <ul class="topnav" id="myTopnav">
+      <li><a onclick="myFunction()" href="#logo"><img class="logo02" src="img/logo.png" alt=""></a></li>
+      <li><a onclick="myFunction()" href="#home">HOME</a></li>
+      <li><a onclick="myFunction()" href="#news">A AGÊNCIA</a></li>
+      <li><a onclick="myFunction()" href="#contact">TRABALHOS</a></li>
+      <li><a onclick="myFunction()" href="#about">LÍDERES</a></li>
+      <li><a onclick="myFunction()" href="#about">CLIENTES</a></li>
+      <li><a onclick="myFunction()" href="#about">VAGAS</a></li>
+      <li><a onclick="myFunction()" href="#about">CONTATO</a></li>
+
+      <li class="icon">
+        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+      </li>
+    </ul>
+  </section>
+
+
 
     <!-- Sidebar -->
-    <div id="sidebar-wrapper">
+    <section id="desktopmenu">
+      <div id="sidebar-wrapper">
+          <nav id="spy">
+              <ul class="sidebar-nav nav">
 
-        <nav id="spy">
-     
-            <ul class="sidebar-nav nav">
+                  <li class="menu01">
+                      <a href="#anch1">
+                         <div class="i-menu homei"></div> <span class="fa fa-anchor solo">HOME</span>
+                      </a>
+                  </li>
+                  <li class="menu02">
+                      <a href="#anch2">
+                          <div class="i-menu agenciai"></div><span class="fa fa-anchor solo">A AGÊNCIA</span>
+                      </a>
+                  </li>
+                  <li class="menu03">
+                      <a href="#anch3">
+                          <div class="i-menu trabalhosi"></div><span class="fa fa-anchor solo">TRABALHOS</span>
+                      </a>
+                  </li>
+                  <li class="menu04">
+                      <a href="#anch4">
+                          <div class="i-menu lideresi"></div><span class="fa fa-anchor solo">LÍDERES</span>
+                      </a>
+                  </li>
+                  <li class="menu05">
+                      <a href="#anch4">
+                          <div class="i-menu clientesi"></div><span class="fa fa-anchor solo">CLIENTES</span>
+                      </a>
+                  </li>
+                  <li class="menu06">
+                      <a href="#anch4">
+                          <div class="i-menu vagasi"></div><span class="fa fa-anchor solo">VAGAS</span>
+                      </a>
+                  </li>
+                  <li class="menu07">
+                      <a href="#anch4">
+                          <div class="i-menu contatoi"></div><span class="fa fa-anchor solo">CONTATO</span>
+                      </a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+    </section>
 
-                <li class="menu01">
-                    <a href="#anch1">
-                       <div class="i-menu homei"></div> <span class="fa fa-anchor solo">HOME</span>
-                    </a>
-                </li>
-                <li class="menu02">
-                    <a href="#anch2">
-                        <div class="i-menu agenciai"></div><span class="fa fa-anchor solo">A AGÊNCIA</span>
-                    </a>
-                </li>
-                <li class="menu03">
-                    <a href="#anch3">
-                        <div class="i-menu trabalhosi"></div><span class="fa fa-anchor solo">TRABALHOS</span>
-                    </a>
-                </li>
-                <li class="menu04">
-                    <a href="#anch4">
-                        <div class="i-menu lideresi"></div><span class="fa fa-anchor solo">LÍDERES</span>
-                    </a>
-                </li>
-                <li class="menu05">
-                    <a href="#anch4">
-                        <div class="i-menu clientesi"></div><span class="fa fa-anchor solo">CLIENTES</span>
-                    </a>
-                </li>
-                <li class="menu06">
-                    <a href="#anch4">
-                        <div class="i-menu vagasi"></div><span class="fa fa-anchor solo">VAGAS</span>
-                    </a>
-                </li>
-                <li class="menu07">
-                    <a href="#anch4">
-                        <div class="i-menu contatoi"></div><span class="fa fa-anchor solo">CONTATO</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <!-- Page content -->
-    <div id="page-content-wrapper">
-        <div class="page-content">
-              <div class="header-unit">
-             
-                  <div class="controls01">
-                    <button class="w3-btn demo" onclick="currentDiv(1)"></button>
-                    <button class="w3-btn demo" onclick="currentDiv(2)"></button>
-                    <button class="w3-btn demo" onclick="currentDiv(3)"></button>
-                  </div>
-              
-                  <img class="logo" src="img/logo.png" alt="">
+    <section id="homesliders">
+      <!-- Page content -->
+      <div id="page-content-wrapper">
+          <div class="page-content">
+                <div class="header-unit">
+               
+                    <div class="controls01">
+                      <button class="w3-btn demo" onclick="currentDiv(1)"></button>
+                      <button class="w3-btn demo" onclick="currentDiv(2)"></button>
+                      <button class="w3-btn demo" onclick="currentDiv(3)"></button>
+                    </div>
                 
-                <div class="mySlides">
-                  <h3>
-                        Misturamos <br/>
-                        arte com ciência  <br/>
-                        para conectar marcas  <br/>
-                        com consumidores. 
-                  </h3>
-                  <a class="botao-home">ASSISTA NOSSO MANIFESTO <img src="img/arrow-home.png" alt=""></a>
-                  <div id="video-container">
-                      <video id="video" autoplay loop class="fillWidth">
-                       <div class="preloader"><img src=”preload.jpg”></div>
-                          <source src="img/video.mp4" type="video/mp4"/>
-                          Your browser does not support the video tag. I suggest you upgrade your browser.
-                      </video>
-                  </div><!-- end video-container -->
-                </div>
+                    <img class="logo" src="img/logo.png" alt="">
+                  
+                  <div class="mySlides">
+                    <h3>
+                          Misturamos <br/>
+                          arte com ciência  <br/>
+                          para conectar marcas  <br/>
+                          com consumidores. 
+                    </h3>
+                    <a class="botao-home">ASSISTA NOSSO MANIFESTO <img src="img/arrow-home.png" alt=""></a>
+                    <div id="video-container">
+                        <video muted id="video" autoplay="autoplay" loop class="fillWidth" controls>
+                            <source src="img/videomobile2.m4v"/>
+                            <source src="img/video.mp4" type="video/mp4"/>
+                            Your browser does not support the video tag. I suggest you upgrade your browser.
+                        </video>
 
-                <div class="mySlides" >
-                    
-                </div>
-                <div class="mySlides" >
-                    
+                    </div><!-- end video-container -->
+                  </div>
+
+                  <div class="mySlides" >
+                      
+                  </div>
+                  <div class="mySlides" >
+                      
+                  </div>
                 </div>
               </div>
-            </div>
-    </div>
-</div>
+      </div>
+    </section>
 
+    <section id="trabalhos">
+      <div class="flexes blue"></div>
+      <div class="flexes purple"></div>
+      <div class="flexes green"></div>
+      <div class="flexes pink"></div>
+    </section>
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="main.min.js"></script>
+<script type="text/javascript">
+var myVideo = document.getElementById('video');
+
+myVideo.addEventListener('canplay', function() {
+  myVideo.play();
+});
+
+myVideo.load();
+myVideo.play();</script>
+
 </body>
 </html>
