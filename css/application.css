@@ -5820,7 +5820,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
   header {
     display: none; } }
 
@@ -5839,7 +5839,7 @@ html {
   padding-right: 90px;
   transition: all 0.2s 0s;
   background-color: #333; }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1024px) {
     #wrapper {
       padding-right: 0px; } }
 
@@ -5853,7 +5853,7 @@ html {
   overflow-y: auto;
   z-index: 1000;
   transition: all 0.2s 0s; }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1024px) {
     #sidebar-wrapper {
       display: none; } }
 
@@ -5947,7 +5947,7 @@ html {
   position: relative;
   margin: auto; }
 
-/* Next & previous buttons */
+/* Next & previous buttons 
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -5959,35 +5959,14 @@ html {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0; }
-
-/* Position the "next button" to the right */
+  border-radius: 0 3px 3px 0;
+}*/
+/* Position the "next button" to the right
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px; }
-
+  border-radius: 3px 0 0 3px;
+} */
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8); }
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center; }
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0; }
-
 .header-unit {
   height: 100vh;
   border: 2px solid #000;
@@ -6020,7 +5999,7 @@ html {
 .logo {
   z-index: 9999999;
   position: relative; }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1024px) {
     .logo {
       display: none; } }
 
@@ -6044,15 +6023,19 @@ html {
   position: relative;
   z-index: 9999;
   color: #fff;
-  font-size: 4em;
+  font-size: 2.8em;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px; }
+  @media screen and (min-width: 1300px) {
+    .mySlides h3 {
+      font-size: 4em;
+      float: none; } }
   @media screen and (max-width: 1200px) {
     .mySlides h3 {
       font-size: 2.8em;
       float: none; } }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1024px) {
     .mySlides h3 {
       font-size: 2em;
       float: none; } }
@@ -6089,7 +6072,7 @@ html {
       width: 320px;
       padding: 21px;
       font-size: 1.2em; } }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1024px) {
     .botao-home {
       width: 250px;
       padding: 0;
@@ -6155,7 +6138,7 @@ html {
   float: left;
   position: relative;
   top: 8px; }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1024px) {
     .i-menu {
       top: 18px;
       width: 28px;
@@ -6196,7 +6179,7 @@ html {
   .agenciai:hover, .agenciai.hovered {
     background-position: 38px 661px; }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
   .topnav {
     display: none; } }
 
@@ -6255,30 +6238,152 @@ ul.topnav li.icon {
 
 #trabalhos {
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+  background: #191919; }
 
 #trabalhos .flexes {
   width: 25%;
   height: 100vh;
-  float: left; }
-  @media screen and (max-width: 900px) {
+  float: left;
+  border-bottom: 1px #444 solid; }
+  @media screen and (max-width: 1024px) {
     #trabalhos .flexes {
       width: 100%;
       height: 25vh; } }
-
-.blue {
-  background-color: #333; }
-
-.purple {
-  background-color: #222; }
-
-.green {
-  background-color: #777; }
-
-.pink {
-  background-color: #999; }
+  #trabalhos .flexes video {
+    height: 100vh; }
+    @media screen and (min-width: 1900px) {
+      #trabalhos .flexes video {
+        width: 150%;
+        height: auto;
+        position: relative;
+        left: -30%; } }
+    #trabalhos .flexes video ::-webkit-media-controls {
+      display: none !important; }
+    @media screen and (max-width: 1024px) {
+      #trabalhos .flexes video {
+        display: none; } }
 
 .page-content {
   overflow: hidden; }
+
+.videoport {
+  display: inline-block;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s 0s;
+  opacity: 0.7; }
+  .videoport .korres {
+    background-image: url(img/port/thumb-korres.jpg);
+    background-size: cover; }
+  .videoport .dafiti {
+    background-image: url(img/port/thumb-dafiti.jpg);
+    background-size: cover; }
+  .videoport .lactosil {
+    background-image: url(img/port/thumb-lactosil.jpg);
+    background-size: cover; }
+  .videoport .foline {
+    background-image: url(img/port/thumb-foline.jpg);
+    background-size: cover; }
+  .videoport:hover {
+    opacity: 1; }
+  .videoport .lowerport {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9999999;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40vh; }
+    @media screen and (max-width: 1024px) {
+      .videoport .lowerport {
+        padding: 0;
+        float: left; } }
+    @media screen and (max-width: 1024px) {
+      .videoport .lowerport .lowerpdesc {
+        float: left;
+        text-align: left;
+        padding: 20px;
+        width: 62%; } }
+    .videoport .lowerport p {
+      color: #fff;
+      font-size: 2em;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+      letter-spacing: 3px; }
+    .videoport .lowerport span {
+      color: #fff;
+      font-size: 1em;
+      padding: 0;
+      margin: 0; }
+      @media screen and (max-width: 1024px) {
+        .videoport .lowerport span {
+          float: left;
+          width: 100%;
+          font-size: 1.4em; } }
+      @media screen and (max-width: 800px) {
+        .videoport .lowerport span {
+          font-size: 1.1em; } }
+      @media screen and (max-width: 600px) {
+        .videoport .lowerport span {
+          float: left;
+          width: 100%;
+          font-size: 0.8em; } }
+      @media screen and (max-width: 460px) {
+        .videoport .lowerport span {
+          float: left;
+          width: 100%;
+          font-size: 1em; } }
+    .videoport .lowerport hr {
+      width: 20%;
+      height: 2px;
+      color: #fecc0c;
+      background-color: #fecc0c;
+      border: none;
+      margin-bottom: 20px;
+      margin-top: 5px; }
+      @media screen and (max-width: 1024px) {
+        .videoport .lowerport hr {
+          float: left; } }
+  .videoport .thumbport {
+    height: 25vh;
+    background-color: #fff;
+    width: 35%; }
+    @media screen and (max-width: 1024px) {
+      .videoport .thumbport {
+        float: left; } }
+    @media screen and (min-width: 1024px) {
+      .videoport .thumbport {
+        display: none; } }
+
+.vercase {
+  position: absolute;
+  z-index: 99999999999999999;
+  width: 100%;
+  background-color: #fecc0c;
+  bottom: 0;
+  height: 60px;
+  text-align: center;
+  color: #191919;
+  font-weight: bold;
+  font-size: 1em;
+  padding-top: 5%;
+  text-decoration: none; }
+  @media screen and (max-width: 460px) {
+    .vercase {
+      display: none; } }
+  .vercase:hover {
+    text-decoration: none; }
+  @media screen and (max-width: 1024px) {
+    .vercase {
+      width: 65%;
+      right: 0;
+      height: 30px;
+      padding-top: 0.5%;
+      text-align: left;
+      padding-left: 25px; } }
 
 /*# sourceMappingURL=application.css.map */

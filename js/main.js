@@ -62,6 +62,25 @@ function showDivs(n) {
 //LIGHTBOX 
 
 
+
+var figure = $(".videoport");
+var vid = figure.find("video");
+
+[].forEach.call(figure, function (item,index) {
+    item.addEventListener('mouseover', hoverVideo.bind(item,index), false);
+    item.addEventListener('mouseout', hideVideo.bind(item,index), false);
+});
+
+function hoverVideo(index, e) {
+    vid[index].play(); 
+}
+
+function hideVideo(index, e) {
+    vid[index].pause(); 
+}
+
+
+
 var $overlay = $('<div class="overlay"></div>');
 var $video = $(' <video autoplay loop controls class="fillWidth"><source src="img/video.mp4" type="video/mp4"/></video>');
 
@@ -132,3 +151,13 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+
+// var myVideo = document.getElementById('video');
+
+// myVideo.addEventListener('canplay', function() {
+//   myVideo.play();
+// });
+
+// myVideo.load();
+// myVideo.play();

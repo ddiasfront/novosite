@@ -12,11 +12,16 @@ $fullheight: 100%;
 $backnormal: #000;
 $backnormal2: #555;
 $backhover: #333;
+$blackone: #191919;
+$blacktwo: #131313;
+$yellowc: #fecc0c;
 
 
-$logobreak: 900px;
+$break-higher: 1900px;
+$break-h3: 1300px;
 $break-medium: 1200px;
-$break-lower: 900px;
+$break-lower: 1024px;
+$break-low: 800px;
 $break-smallvile: 600px;
 $break-small: 460px;
 
@@ -52,7 +57,7 @@ html {
   margin-right: -250px;
   right: 90px;
   width: 250px;
-  background: #191919;
+  background: $blackone;
   position: fixed;
   height: 100%;
   overflow-y: auto;
@@ -92,14 +97,14 @@ html {
 .sidebar-nav li {
   line-height: 40px;
   text-indent: 20px;
-  background-color: #191919;
+  background-color: $blackone;
 }
 
 .sidebar-nav li a {
   color: #fff;
   display: block;
   text-decoration: none; 
-  background-color: #191919;
+  background-color: $blackone;
       padding: 10px 39px;
 
 }
@@ -135,14 +140,14 @@ html {
 }
 
 .sidebar-nav li a:hover{
-  background-color: #131313;
+  background-color: $blacktwo;
   text-decoration: none;
 }
 
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
   text-decoration: none;
-    background-color: #131313;
+    background-color: $blacktwo;
 }
 
 
@@ -191,7 +196,7 @@ html {
   margin: auto;
 }
 
-/* Next & previous buttons */
+/* Next & previous buttons 
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -204,38 +209,15 @@ html {
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-}
+}*/
 
-/* Position the "next button" to the right */
+/* Position the "next button" to the right
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-}
+} */
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
 
 .header-unit {
   height: 100vh;
@@ -273,7 +255,7 @@ html {
 .logo {
     z-index: 9999999;
     position: relative;
-        @media screen and (max-width: $logobreak) {
+        @media screen and (max-width: $break-lower) {
            display: none;
           }
 }
@@ -302,10 +284,15 @@ height: 35px;
   position: relative;
   z-index: 9999;
   color: #fff;
-  font-size: 4em;
+  font-size: 2.8em;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
+
+    @media screen and (min-width: $break-h3) {
+      font-size:4em;
+      float: none;
+    }
 
     @media screen and (max-width: $break-medium) {
       font-size: 2.8em;
@@ -508,7 +495,7 @@ ul.topnav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #191919;
+    background-color: $blackone;
 }
 
 /* Float the list items side by side */
@@ -563,6 +550,7 @@ ul.topnav li.icon {display: none;}
 
 height: 100vh;
 width: 100%;
+background: #191919;
 
 }
 
@@ -570,36 +558,198 @@ width: 100%;
  width: 25%;
 height: 100vh;
 float: left;
+border-bottom: 1px #444 solid;
+
 
   @media screen and (max-width: $break-lower) {
     width: 100%;
     height: 25vh;
     }
 
-}
+    video {
 
+      height: 100vh;
 
-.blue {
- background-color: #333;
-}
+      @media screen and (min-width: $break-higher) {
+        width: 150%;
+        height: auto;
+        position:relative;
+        left: -30%;
+      } 
 
+      ::-webkit-media-controls {
+        display:none !important;
+      }
 
-.purple {
- background-color: #222;
-}
+      @media screen and (max-width: $break-lower) {
+        display: none;
+      }
+    }
 
-
-.green {
- background-color: #777;
-}
-
-
-.pink {
- background-color: #999;
-  
 }
 
 .page-content {
   overflow: hidden;
 }
 
+
+.videoport {
+  display: inline-block;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s 0s;
+  opacity: 0.7;
+
+    .korres {
+      background-image: url(img/port/thumb-korres.jpg);
+      background-size: cover;
+    }
+    .dafiti {
+      background-image: url(img/port/thumb-dafiti.jpg);
+      background-size: cover;
+    }
+    .lactosil {
+      background-image: url(img/port/thumb-lactosil.jpg);
+      background-size: cover;
+    }
+    .foline {
+      background-image: url(img/port/thumb-foline.jpg);
+      background-size: cover;
+    }
+    &:hover {
+            opacity: 1;
+    }
+
+    .lowerport {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9999999;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40vh;
+
+        @media screen and (max-width: $break-lower) {
+                 padding: 0;
+                 float: left;
+          }
+
+
+        .lowerpdesc {
+                 @media screen and (max-width: $break-lower) {
+                 float: left;
+                 text-align: left;
+                 padding: 20px;
+                 width: 62%;
+          }
+        }
+
+        p {
+          color: $secondary-color;
+          font-size: 2em;
+          text-transform: uppercase;
+          padding: 0;
+          margin: 0;
+          letter-spacing: 3px;
+
+
+        }
+
+        span {
+          color: $secondary-color;
+          font-size: 1em;
+          padding: 0;
+          margin: 0;
+
+ 
+          @media screen and (max-width: $break-lower) {
+                 float: left;
+                 width: 100%;          
+                 font-size: 1.4em;
+
+          }
+
+         @media screen and (max-width: $break-low) {
+   
+                 font-size: 1.1em;
+
+          }    
+
+          @media screen and (max-width: $break-smallvile) {
+                 float: left;
+                 width: 100%;          
+                 font-size: 0.8em;
+
+          }
+
+          @media screen and (max-width: $break-small) {
+                 float: left;
+                 width: 100%;          
+                 font-size: 1em;
+
+          }
+        }
+
+        hr {
+          width: 20%;
+          height: 2px;
+          color: $yellowc;
+          background-color: $yellowc;
+          border:none;
+          margin-bottom: 20px;
+          margin-top: 5px;
+          @media screen and (max-width: $break-lower) {
+                 float: left;
+          }
+        }
+    }
+
+    .thumbport {
+      height: 25vh;
+      background-color: #fff;
+      width: 35%;
+
+        @media screen and (max-width: $break-lower) {
+            float: left;
+          }
+
+        @media screen and (min-width: $break-lower) {
+            display: none; 
+          }
+    }
+
+}
+
+.vercase {
+  position: absolute;
+  z-index: 99999999999999999;
+  width: 100%;
+  background-color: $yellowc;
+  bottom: 0;
+  height: 60px;
+  text-align: center;
+  color: $blackone;
+  font-weight: bold;
+  font-size: 1em;
+  padding-top: 5%;
+  text-decoration: none;
+
+      @media screen and (max-width: $break-small) {
+        display: none;
+      }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+    @media screen and (max-width: $break-lower) {
+      width: 65%;
+      right: 0;
+      height: 30px;
+      padding-top: 0.5%;
+      text-align: left;
+    padding-left: 25px;
+    }
+}
