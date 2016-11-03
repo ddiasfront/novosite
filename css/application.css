@@ -5830,7 +5830,8 @@ ul,
 ol {
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif; }
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #191919; }
 
 html {
   font-family: "Source Sans Pro", sans-serif; }
@@ -5865,7 +5866,8 @@ html {
 
 #page-content-wrapper {
   width: 100%;
-  transition: all 0.2s ease 0s; }
+  transition: all 0.2s ease 0s;
+  overflow: hidden; }
 
 .sidebar-nav {
   position: absolute;
@@ -5918,6 +5920,12 @@ html {
   text-decoration: none;
   background-color: #131313; }
 
+#menumobile {
+  position: fixed;
+  top: 0;
+  z-index: 9999999999999;
+  width: 100%; }
+
 #menu-toggle {
   width: 200px;
   height: 200px;
@@ -5969,25 +5977,30 @@ html {
 /* On hover, add a black background color with a little bit see-through */
 .header-unit {
   height: 100vh;
-  border: 2px solid #000;
   border-right: none;
   border-left: none;
   position: relative;
-  padding: 0px 20px 00px 60px; }
+  padding: 0px 20px 00px 60px;
+  overflow: hidden; }
   @media screen and (max-width: 460px) {
     .header-unit {
       padding: 0 20px 00px 30px;
-      height: 90vh; } }
+      height: 100vh; } }
 
 #video-container {
   position: absolute; }
+  @media screen and (max-width: 460px) {
+    #video-container {
+      top: 12px; } }
 
 #video-container {
   top: 0%;
   left: 0%;
   width: 100%;
   height: 100vh;
-  overflow: hidden; }
+  overflow: hidden;
+  background: transparent url(img/preload.jpg);
+  background-size: 100% 100%; }
 
 #video {
   position: absolute;
@@ -5995,6 +6008,9 @@ html {
 
 #video.fillWidth {
   height: 107vh; }
+  @media screen and (max-width: 460px) {
+    #video.fillWidth {
+      height: 115vh; } }
 
 .logo {
   z-index: 9999999;
@@ -6251,7 +6267,9 @@ ul.topnav li.icon {
       width: 100%;
       height: 25vh; } }
   #trabalhos .flexes video {
-    height: 100vh; }
+    height: 100vh;
+    background: transparent no-repeat url(img/preload.jpg);
+    background-size: contain; }
     @media screen and (min-width: 1900px) {
       #trabalhos .flexes video {
         width: 150%;
@@ -6314,6 +6332,9 @@ ul.topnav li.icon {
       padding: 0;
       margin: 0;
       letter-spacing: 3px; }
+      @media screen and (max-width: 1024px) {
+        .videoport .lowerport p {
+          font-size: 1.5em; } }
     .videoport .lowerport span {
       color: #fff;
       font-size: 1em;
@@ -6323,7 +6344,7 @@ ul.topnav li.icon {
         .videoport .lowerport span {
           float: left;
           width: 100%;
-          font-size: 1.4em; } }
+          font-size: 1.2em; } }
       @media screen and (max-width: 800px) {
         .videoport .lowerport span {
           font-size: 1.1em; } }
