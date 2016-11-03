@@ -454,7 +454,10 @@ height: 35px;
 .homei {
 background-position: -16px 349px;
   &:hover, &.hovered {
-    background-position: 37px 349px;
+     background-image: url(img/menu/ico01.gif);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
   }
 
 }
@@ -462,42 +465,60 @@ background-position: -16px 349px;
 .contatoi {
 background-position: -18px 408px;
         &:hover, &.hovered {
-        background-position: 35px 408px;
+             background-image: url(img/menu/ico07.gif);
+              background-repeat: no-repeat;
+              background-position: left;
+              background-size: contain;
       }
 }
 
 .vagasi {
   background-position: -16px 461px;
         &:hover, &.hovered {
-        background-position: 37px 461px;
+             background-image: url(img/menu/ico06.gif);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: contain;
       }
 }
 
 .clientesi {
       background-position: -17px 509px;
         &:hover, &.hovered {
-        background-position: 36px 509px;
+             background-image: url(img/menu/ico05.gif);
+              background-repeat: no-repeat;
+              background-position: left;
+              background-size: contain;
       }
 }
 
 .lideresi {
   background-position: -18px 559px;
         &:hover, &.hovered {
-        background-position: 35px 559px;
+             background-image: url(img/menu/ico04.gif);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: contain;
       }
 }
 
 .trabalhosi {
       background-position: -16px 611px;
         &:hover, &.hovered {
-        background-position: 37px 611px;
+            background-image: url(img/menu/ico03.gif);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: contain;
       }
 }
 
 .agenciai {
       background-position: -15px 661px;
         &:hover, &.hovered {
-        background-position: 38px 661px;
+             background-image: url(img/menu/ico02.gif);
+              background-repeat: no-repeat;
+              background-position: left;
+              background-size: contain;
       }
 }
 
