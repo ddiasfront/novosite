@@ -797,3 +797,12 @@ border-bottom: 1px #444 solid;
     }
 }
 
+div.box {
+    width: 30em;
+    height: 3em;
+    background-color: #108040;
+  }
+  div.box.swipe {
+    background-color: #7ACEF4;
+  }
+

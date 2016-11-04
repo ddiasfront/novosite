@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
 <div id="wrapper">
 
   <section id="menumobile">
@@ -170,17 +171,18 @@
 </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/1.0.5/jquery.mobile-events.min.js"></script>
 <script src="main.min.js"></script>
-  <script>
-    var canvasVideo = new CanvasVideoPlayer({
-      videoSelector: '.js-video',
-      canvasSelector: '.js-canvas',
-      timelineSelector: '.js-timeline',
-      audio: false
-    });
-  </script>
 
+<script>
+  $('#homesliders').swiperight(function(e) { 
+      avancar(1);
+  });
+    $('#homesliders').swipeleft(function(e) { 
+      voltar(1);
+  });
+  </script>
 
 </body>
 </html>

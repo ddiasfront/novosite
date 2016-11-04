@@ -1,5 +1,13 @@
 
 
+function x() {
+  var l = $('.demo').length;
+  alert(l);
+}
+
+
+
+
   /*Menu-toggle*/
     $("#sidebar-wrapper").hover(function(e) {
         e.preventDefault();
@@ -32,11 +40,29 @@
 
 // slider
 
+var demonum = $('.demo').length;
 var slideIndex = 1;
+
 showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+function avancar(n) {
+  if (n == demonum){
+    return;
+  }
+  else {
+     showDivs(slideIndex += n);
+  }
+ 
+}
+
+function voltar(n) {
+  if (n >= 1) {
+    showDivs(slideIndex -= n);
+  }
+  else {
+    return;
+  }
+  
 }
 
 function currentDiv(n) {
@@ -57,7 +83,9 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " w3-red";
+
 }
+
 
 //LIGHTBOX 
 
@@ -161,3 +189,7 @@ function myFunction() {
 
 // myVideo.load();
 // myVideo.play();
+
+
+
+
