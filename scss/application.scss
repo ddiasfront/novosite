@@ -672,6 +672,7 @@ border-bottom: 1px #444 solid;
     padding-right: 20px;
     padding-top: 40vh;
 
+
         @media screen and (max-width: $break-lower) {
                  padding: 0;
                  float: left;
@@ -779,6 +780,7 @@ border-bottom: 1px #444 solid;
   padding-top: 5%;
   text-decoration: none;
 
+
       @media screen and (max-width: $break-small) {
         display: none;
       }
@@ -809,4 +811,6 @@ div.box {
   .ui-loader {
     display: none;
   }
+
+
 

@@ -8,8 +8,6 @@
   <meta charset="utf-8"/>
 </head>
 <body data-role="page">
-
-
 <div id="wrapper">
 
   <section id="menumobile">
@@ -92,11 +90,13 @@
                     <img class="logo" src="img/logo.png" alt="">
                   
                   <div class="mySlides">
-                    <h3>
+                    <h3 id="typed-strings">
+                  
                           Misturamos <br/>
                           arte com ciência  <br/>
                           para conectar marcas  <br/>
                           com consumidores. 
+                          <span id="typed"></span>
                     </h3>
                     <a class="botao-home">ASSISTA NOSSO MANIFESTO <img src="img/arrow-home.png" alt=""></a>
                     <div id="video-container">
@@ -127,11 +127,11 @@
     </section>
 
     <section id="trabalhos">
-      <div class="flexes blue videoport">
-        <div class="lowerport">
+      <div class="flexes blue videoport port01h">
+        <div class="lowerport port01">
           <div class="thumbport korres"></div> <div class="lowerpdesc"><p>Lactosil</p><hr/><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
         </div>
-        <a class="vercase">VER CASE</a>
+        <a class="vercase port01">VER CASE</a>
         <video loop>
             <source src="img/port/korres2.m4v" type="video/mp4"/>
             Your browser does not support the video tag. I suggest you upgrade your browser.
@@ -142,7 +142,7 @@
           <div class="thumbport lactosil"></div> <div class="lowerpdesc"><p>Lactosil</p><hr/><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
         </div>
         <a class="vercase">VER CASE</a>
-        <video loop>
+        <video loop class="port02">
             <source src="img/port/lactosil.m4v" type="video/mp4"/>
             Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
@@ -152,7 +152,7 @@
           <div class="thumbport foline"></div> <div class="lowerpdesc"><p>Lactosil</p><hr/><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
         </div>
         <a class="vercase">VER CASE</a>
-        <video loop>
+        <video loop class="port03">
             <source src="img/port/foline.m4v" type="video/mp4"/>
             Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
@@ -162,7 +162,7 @@
           <div class="thumbport dafiti"></div> <div class="lowerpdesc"><p>Lactosil</p><hr/><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
         </div>
         <a class="vercase">VER CASE</a>
-        <video loop>
+        <video loop class="port4">
             <source src="img/port/dafiti.m4v" type="video/mp4"/>
             Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
@@ -173,6 +173,7 @@
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="typed.min.js"></script>
 <script src="main.min.js"></script>
 
 
@@ -192,6 +193,14 @@ $( document ).on( "pagecreate", "html", function() {
 
 });
 
+</script>
+
+<script>
+    $(function(){
+        $("#typed").typed({
+            stringsElement: $('#typed-strings')
+        });
+    });
 </script>
 </body>
 </html>

@@ -1,6 +1,9 @@
 
 
 
+
+// VIDEO PORTFOLIO CUSTOM HOVER
+
 var figure = $(".videoport");
 var vid = figure.find("video");
 
@@ -16,6 +19,8 @@ function hoverVideo(index, e) {
 function hideVideo(index, e) {
     vid[index].pause(); 
 }
+
+
 
 
 
@@ -139,10 +144,6 @@ $(function() {
     });
 });
 
-// Highlight the top nav as scrolling occurs
-$('body').scrollspy({
-    target: '.navbar-fixed-top'
-})
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
@@ -158,6 +159,15 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+
+$('.port01').hide();
+
+$(".port01h").hover(function(){
+    $( ".port01" ).show();
+    }, function(){
+    $( ".port01" ).hide();
+});
 
 
 
