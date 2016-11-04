@@ -6436,4 +6436,7 @@ div.box {
 div.box.swipe {
   background-color: #7ACEF4; }
 
+.ui-loader {
+  display: none; }
+
 /*# sourceMappingURL=application.css.map */

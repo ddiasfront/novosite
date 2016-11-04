@@ -1,11 +1,5 @@
 
 
-function x() {
-  var l = $('.demo').length;
-  alert(l);
-}
-
-
 
 
   /*Menu-toggle*/
@@ -22,20 +16,6 @@ function x() {
     });
 
 
-		window.addEventListener('load', function() {
-		    var video = document.querySelector('#video');
-		    var preloader = document.querySelector('.preloader');
-
-		    function checkLoad() {
-		        if (video.readyState === 4) {
-		            preloader.parentNode.removeChild(preloader);
-		        } else {
-		            setTimeout(checkLoad, 100);
-		        }
-		    }
-
-		    checkLoad();
-		}, false);
 
 
 // slider
@@ -88,24 +68,6 @@ function showDivs(n) {
 
 
 //LIGHTBOX 
-
-
-
-var figure = $(".videoport");
-var vid = figure.find("video");
-
-[].forEach.call(figure, function (item,index) {
-    item.addEventListener('mouseover', hoverVideo.bind(item,index), false);
-    item.addEventListener('mouseout', hideVideo.bind(item,index), false);
-});
-
-function hoverVideo(index, e) {
-    vid[index].play(); 
-}
-
-function hideVideo(index, e) {
-    vid[index].pause(); 
-}
 
 
 
@@ -179,16 +141,6 @@ function myFunction() {
         x.className = "topnav";
     }
 }
-
-
-// var myVideo = document.getElementById('video');
-
-// myVideo.addEventListener('canplay', function() {
-//   myVideo.play();
-// });
-
-// myVideo.load();
-// myVideo.play();
 
 
 

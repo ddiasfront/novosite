@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8"/>
 </head>
-<body>
+<body data-role="page">
 
 
 <div id="wrapper">
@@ -100,7 +100,7 @@
                     </h3>
                     <a class="botao-home">ASSISTA NOSSO MANIFESTO <img src="img/arrow-home.png" alt=""></a>
                     <div id="video-container">
-                        <video muted id="video" autoplay="autoplay" loop class="fillWidth" controls preload="auto">
+                        <video id="video" class="fillWidth" controls autoplay>
                             <source src="img/videomobile2.m4v"/>
                             <source src="img/video.mp4" type="video/mp4"/>
                             Your browser does not support the video tag. I suggest you upgrade your browser.
@@ -171,10 +171,10 @@
 </div>
 
 
-<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="main.min.js"></script>
-
+<!-- 
 <script>
   $('.header-unit').swiperight(function(e) { 
       avancar(1);
@@ -183,6 +183,21 @@
       voltar(1);
   });
   </script>
+ -->
 
+<script type="text/javascript">
+$( document ).on( "pagecreate", "html", function() {
+
+  
+    $("#homesliders").on( "swiperight", function( event ) {
+         avancar(1);
+    });
+  $("#homesliders").on( "swipeleft", function( event ) {
+         voltar(1);
+    });
+
+
+});
+</script>
 </body>
 </html>
