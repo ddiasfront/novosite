@@ -100,7 +100,7 @@
                     </h3>
                     <a class="botao-home">ASSISTA NOSSO MANIFESTO <img src="img/arrow-home.png" alt=""></a>
                     <div id="video-container">
-                        <video id="video" class="fillWidth" controls autoplay>
+                        <video id="video" class="fillWidth" controls autoplay poster="img/transp.png">
                             <source src="img/videomobile2.m4v"/>
                             <source src="img/video.mp4" type="video/mp4"/>
                             Your browser does not support the video tag. I suggest you upgrade your browser.
@@ -175,5 +175,23 @@
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="main.min.js"></script>
 
+
+<script type="text/javascript">
+
+
+$( document ).on( "pagecreate", "html", function() {
+
+  
+    $("#homesliders").on( "swiperight", function( event ) {
+         avancar(1);
+    });
+  $("#homesliders").on( "swipeleft", function( event ) {
+         voltar(1);
+    });
+
+
+});
+
+</script>
 </body>
 </html>
