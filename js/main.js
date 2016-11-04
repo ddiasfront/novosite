@@ -145,3 +145,16 @@ function myFunction() {
 
 
 
+$( document ).on( "pagecreate", "html", function() {
+
+  
+    $("#homesliders").on( "swiperight", function( event ) {
+         avancar(1);
+    });
+  $("#homesliders").on( "swipeleft", function( event ) {
+         voltar(1);
+    });
+
+
+});
+
