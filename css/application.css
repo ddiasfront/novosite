@@ -6027,6 +6027,17 @@ html {
   z-index: 9999;
   top: 90%; }
 
+.controls02 {
+  position: relative;
+  z-index: 9999;
+  bottom: -94vh;
+  width: 100%;
+  height: 75px;
+  background-color: #000000; }
+  @media screen and (max-width: 1024px) {
+    .controls02 {
+      top: 55vh; } }
+
 .mySlides {
   width: 80%;
   padding-top: 12vh; }
@@ -6131,7 +6142,7 @@ html {
 .w3-red {
   background-color: #e0b51f; }
 
-.overlay {
+.overlay, .overlay01, .overlay02, .overlay03, .overlay04 {
   z-index: 999999999999999999;
   width: 100%;
   height: 100vh;
@@ -6141,11 +6152,10 @@ html {
   left: 0;
   display: none;
   text-align: center; }
-
-.overlay video {
-  z-index: 99999999999999999999999;
-  width: 100%;
-  height: 100vh; }
+  .overlay video, .overlay01 video, .overlay02 video, .overlay03 video, .overlay04 video {
+    z-index: 99999999999999999999999;
+    width: 100%;
+    height: 100vh; }
 
 .i-menu {
   background-image: url(img/menu/sprite.png);
@@ -6412,7 +6422,7 @@ ul.topnav li.icon {
   color: #191919;
   font-weight: bold;
   font-size: 1em;
-  padding-top: 5%;
+  padding-top: 20px;
   text-decoration: none; }
   @media screen and (max-width: 460px) {
     .vercase {
@@ -6438,5 +6448,166 @@ div.box.swipe {
 
 .ui-loader {
   display: none; }
+
+/* code for animated blinking cursor */
+.typed-cursor {
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.type-wrap {
+  height: 30vh; }
+
+.port01, .port02, .port03, .port04 {
+  opacity: 0;
+  transition: all 0.15s 0.15s; }
+  @media screen and (max-width: 1024px) {
+    .port01, .port02, .port03, .port04 {
+      opacity: 1; } }
+
+.thefuckenhover {
+  opacity: 1;
+  transition: all 0.15s 0.15s; }
+
+.fecharover, .fecharover:hover {
+  width: 40px;
+  height: 40px;
+  background-color: #fecc0c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999999999999;
+  text-align: center;
+  color: #000;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 10px;
+  cursor: pointer; }
+
+.myLeads {
+  color: #fff;
+  padding: 35px;
+  padding-right: 120px; }
+
+#lideres {
+  background-color: #020000;
+  height: 100vh;
+  overflow: hidden; }
+  @media screen and (max-width: 1024px) {
+    #lideres {
+      height: 61vh; } }
+
+.lideresbg {
+  background-color: #020000;
+  background-image: url(img/lideres.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  height: 100vh; }
+  @media screen and (max-width: 1200px) {
+    .lideresbg {
+      background-size: 100%; } }
+  @media screen and (max-width: 1024px) {
+    .lideresbg {
+      height: 61vh; } }
+
+.demolead, .demolead:hover {
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  width: 20%;
+  float: left;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 0.8%; }
+  @media screen and (max-width: 1300px) {
+    .demolead, .demolead:hover {
+      font-size: 1.4em;
+      margin-top: 1.4%; } }
+  @media screen and (max-width: 1200px) {
+    .demolead, .demolead:hover {
+      font-size: 1.4em;
+      margin-top: 1.4%; } }
+  @media screen and (max-width: 1024px) {
+    .demolead, .demolead:hover {
+      font-size: 1em;
+      margin-top: 2.4%; } }
+  @media screen and (max-width: 460px) {
+    .demolead, .demolead:hover {
+      width: 17%; } }
+  @media screen and (max-width: 600px) {
+    .demolead, .demolead:hover {
+      width: 17%; } }
+
+.bolinha {
+  background-color: #fecc0c;
+  border-radius: 20px;
+  z-index: 99999999999999999999;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  /* bottom: 60%; */
+  bottom: 60px;
+  left: 50%;
+  opacity: 1;
+  transition: all 2s 2s; }
+  @media screen and (max-width: 1200px) {
+    .bolinha {
+      top: -50px; } }
+  @media screen and (max-width: 460px) {
+    .bolinha {
+      display: none; } }
+  @media screen and (max-width: 600px) {
+    .bolinha {
+      display: none; } }
+
+.demolead.w3-yellow {
+  color: #fecc0c; }
 
 /*# sourceMappingURL=application.css.map */
