@@ -32,16 +32,13 @@ var wtf;
                 stringsElement: $('#typed-strings'),
                 typeSpeed: 30,
                 backDelay: 0,
-                loop: true,
+                loop: false,
                 contentType: 'html', // or text
                 // defaults to false for infinite loop
                 loopCount: false,
-                resetCallback: function() { newTyped(); }
             });
 
-            $(".reset").click(function(){
-                $("#typed").typed('reset');
-            });
+  
 
         });
 
@@ -455,7 +452,14 @@ $('.demolead').click(function() {
       return wtf; 
     }
 
+    var alllinks = $('.sidebar-nav li a');
     var homescrolling = $('.menu01>a');
+    var agenciacrolling = $('.menu02>a');
+    var trabalhocrolling = $('.menu03>a');
+    var leadscrolling = $('.menu04>a');
+    var clientescrolling = $('.menu05>a');
+    var vagascrolling = $('.menu06>a');
+    var contatoscrolling = $('.menu07>a');
 
 
    $( document ).ready(function() {
@@ -467,18 +471,24 @@ $('.demolead').click(function() {
          scrollwtf();
 
           if ( wtf >= homesliders && wtf <= lideresscroll) {
-              homescrolling.removeClass('active');
-               homescrolling.children().removeClass('hovered');
+              alllinks.removeClass('active');
+              alllinks.children().removeClass('hovered');
+              agenciacrolling.addClass('active');
+              agenciacrolling.children().addClass('hovered');
              $imgoff.attr('src', 'img/menu/ico02.gif');
              $textoff.html('TRABALHOS');
           }
 
           else if ( wtf >= lideresscroll ) {
+              alllinks.removeClass('active');
+              alllinks.children().removeClass('hovered');
               $imgoff.attr('src', 'img/menu/ico03.gif');
-               $textoff.html('LÍDERES');
+              $textoff.html('LÍDERES');
           }
 
           else {
+                          alllinks.removeClass('active');
+               alllinks.children().removeClass('hovered');
               $imgoff.attr('src', 'img/menu/ico01.gif');
                $textoff.html('HOME');
                 homescrolling.addClass('active');
