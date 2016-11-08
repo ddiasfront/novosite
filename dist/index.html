@@ -24,6 +24,7 @@
       <li class="icon">
         <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
       </li>
+       <div class="currentpage"><img src="img/menu/ico01.gif"/><span></span> </div>
     </ul>
   </section>
 
@@ -65,7 +66,7 @@
                       </a>
                   </li>
                   <li class="menu07">
-                      <a href="#anch4">
+                      <a href="#anch4">x
                           <div class="i-menu contatoi"></div><span class="fa fa-anchor solo">CONTATO</span>
                       </a>
                   </li>
@@ -177,6 +178,23 @@
     </section>
 
     <section id="lideres">
+        <div class="lowerlead">
+            <div class="leadflex">
+                <img class="right" src="img/ricardo.jpg"><div class="desc right alpha"><p>Ricardo <br/>Calfat </p><hr/><span>VP DE OPERAÇÕES</span></div>
+            </div>
+            <div class="leadflex">
+                <img class="left" src="img/eduardo.jpg"><div class="photo left"></div><div class="desc left beta"><p>Ricardo <br/>Calfat </p><hr/><span>VP DE OPERAÇÕES</span></div>
+            </div>
+            <div class="leadflex">
+                <img class="right" src="img/fernando.jpg"><div class="desc right alpha"><p>Ricardo <br/>Calfat </p><hr/><span>VP DE OPERAÇÕES</span></div>
+            </div>
+            <div class="leadflex">
+                <img class="left" src="img/renato.jpg"><div class="desc left beta"><p>Ricardo <br/>Calfat </p><hr/><span>VP DE OPERAÇÕES</span></div>
+            </div>
+            <div class="leadflex">
+               <img class="right" src="img/tripoli.jpg"><div class="desc right alpha"><p>Ricardo <br/>Calfat </p><hr/><span>VP DE OPERAÇÕES</span></div>
+            </div>
+        </div>
         <div class="lideresbg">
           <p class="myLeads">Lorem ipsum dolor sit amet, estibulum vestibulum sodales vestibulum. Praesent consequat vehicula augue, in aliquet metus. Nullam rhoncus urna magna, a ultrices dui placerat eu. Aliquam a magna magna. Nunc pulvinar pulvinar justo eu luctus. Integer vitae ullamcorper nibh. Etiam eget convallis felis, at vestibulum nunc. Nullam aliquet a turpis eu pharetra. Phasellus tincidunt nec lacus a viverra. Curabitur fermentum turpis vel diam tempus ullamcorper. Nam sit amet metus sit amet lorem pha</p>
           <p class="myLeads">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum sodales vestibulum. Praesent consequat vehicula augue, in aliquet metus. Nullam rhoncus urna magna, a ultrices dui placerat eu. Aliquam a magna magna. Nunc pulvinar pulvinar justo eu luctus. Integer vitae ullamcorper nibh. Etiam eget convallis felis, at vestibulum am tempus ullamcorper. Nam sit amet metus sit amet lorem pha</p>
@@ -186,11 +204,11 @@
         </div>
 
         <div class="controls02">
-          <a class="demolead" onclick="currentDiv(1)">Ricardo Calfat</a>
-          <a class="demolead" onclick="currentDiv(2)">Eduardo Barros</a>
-          <a class="demolead" onclick="currentDiv(3)">Fernando Calfat</a>
-          <a class="demolead" onclick="currentDiv(4)">Renato Pereira</a>
-          <a class="demolead" onclick="currentDiv(5)">Marcelo Tripoli</a>
+          <a class="demolead" onclick="currentDivLead(1)">Ricardo Calfat</a>
+          <a class="demolead" onclick="currentDivLead(2)">Eduardo Barros</a>
+          <a class="demolead" onclick="currentDivLead(3)">Fernando Calfat</a>
+          <a class="demolead" onclick="currentDivLead(4)">Renato Pereira</a>
+          <a class="demolead" onclick="currentDivLead(5)">Marcelo Tripoli</a>
         </div>
     </section>
 </div>
@@ -217,6 +235,11 @@ $( document ).on( "pagecreate", "html", function() {
 
 
 });
+
+</script>
+
+<script type="text/javascript">
+
 
 </script>
 

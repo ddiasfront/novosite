@@ -108,9 +108,12 @@ html {
   text-decoration: none; 
   background-color: $blackone;
       padding: 10px 39px;
-
 }
 
+
+.ui-link.active {
+  background-color: #131313;
+}
 
 .sidebar-nav li a span {
  padding-left:20px;
@@ -296,10 +299,6 @@ height: 35px;
     width: 100%;
     height: 75px;
     background-color: #000000;        
-
-    @media screen and (max-width: $break-lower) {
-              top: 55vh;
-          }
 }
 
 .mySlides {
@@ -548,7 +547,7 @@ ul.topnav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: $blackone;
+    background-color: $blacktwo;
 }
 
 /* Float the list items side by side */
@@ -561,7 +560,7 @@ ul.topnav li a {
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 16px;
     text-decoration: none;
     transition: 0.3s;
     font-size: 17px;
@@ -900,8 +899,11 @@ div.box {
 
 .myLeads {
   color: #fff;
-      padding: 35px;
-    padding-right: 120px;
+  padding: 35px;
+  padding-right: 120px;
+    @media screen and (max-width: $break-lower) {
+        padding: 125px 80px 35px 35px;
+    }
 }
 
 #lideres {
@@ -909,9 +911,7 @@ background-color: #020000;
 height: 100vh;
 overflow:hidden;    
 
-@media screen and (max-width: $break-lower) {
-       height: 61vh;
-      }
+
 }
 
 .lideresbg {
@@ -919,18 +919,21 @@ overflow:hidden;
   background-image: url(img/lideres.jpg);
   background-repeat:no-repeat;
   background-size: cover;
-  background-position: bottom;
   position: absolute;
   height: 100vh;
 
-    @media screen and (max-width: $break-medium) {
-       background-size:100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+
+      @media screen and (max-width: $break-medium) {
+              background-size: 120%;
+              background-position:bottom;
+      }
+            @media screen and (max-width: $break-smallvile) {
+              display: none;
       }
 
-
-    @media screen and (max-width: $break-lower) {
-      height: 61vh;
-      }
 }
 
 .demolead, .demolead:hover {
@@ -997,4 +1000,91 @@ overflow:hidden;
 .demolead.w3-yellow {
     color: #fecc0c;
 }
+
+.lowerlead {
+  width: 100%;
+  height: 100vh;
+  background-color: #444;
+        @media screen and (min-width: $break-smallvile) {
+      display: none;
+      }
+}
+
+.leadflex {
+  width: 100%;
+  height: 20vh;
+  background-color: #131313;
+  border: 2px solid #191919;
+  margin-top: -1px;
+margin-left: -1px;
+
+
+    .desc {
+        width: auto;
+        padding-top: 4%;
+
+        p {
+          font-size: 20px;
+          color: #fff;
+          text-transform: uppercase;
+        }
+
+        span {
+          font-size: 12px;
+          color: #fecc0c;
+          text-transform: uppercase;
+        }
+
+        hr {
+          width: 100%;
+          border-color: #fecc0c;
+        }
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    img {
+      height: 100%;
+      float: left;
+      border-left:  2px solid #191919;
+
+    }
+
+    .alpha {
+    text-align: right;
+    padding-right: 20px;
+    }
+
+    .beta {
+    text-align: left;
+    padding-left: 20px;
+    }
+}
+
+.currentpage {
+    float: right;
+    padding-right: 10px;
+    color: #fff;
+    line-height: 48px;
+
+    img {
+      padding-right:10px;
+    }
+
+    span {
+      position: relative;
+    font-size: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
+    top: 4px
+    }
+}
+
+
 

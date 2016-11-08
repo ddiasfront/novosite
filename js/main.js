@@ -1,4 +1,5 @@
 
+
 // MENU DESKTOP
 $(".sidebar-nav li a").click(function() {
   $(".sidebar-nav li a:active").addClass('hovered');
@@ -20,7 +21,7 @@ $(".sidebar-nav li a").click(function(){
     $(".sidebar-nav li a").children().removeClass("hovered");
     $(".sidebar-nav li a:focus div").toggleClass("hovered");
 });
-
+var wtf;
 
 //TYPED 
 
@@ -35,7 +36,6 @@ $(".sidebar-nav li a").click(function(){
                 contentType: 'html', // or text
                 // defaults to false for infinite loop
                 loopCount: false,
-                callback: function(){ foo(); },
                 resetCallback: function() { newTyped(); }
             });
 
@@ -323,19 +323,19 @@ var leadIndex = 1;
 
 showDivslead(leadIndex);
 
-function avancarlead(n) {
-  if (n == demonum){
+function avancarlead(m) {
+  if (m == demonum){
     return;
   }
   else {
-     showDivslead(leadIndex += n);
+     showDivslead(leadIndex += m);
   }
  
 }
 
-function voltarlead(n) {
-  if (n >= 1) {
-    showDivslead(leadIndex -= n);
+function voltarlead(m) {
+  if (m >= 1) {
+    showDivslead(leadIndex -= m);
   }
   else {
     return;
@@ -343,16 +343,16 @@ function voltarlead(n) {
   
 }
 
-function currentDiv(n) {
-  showDivslead(leadIndex = n);
+function currentDivLead(m) {
+  showDivslead(leadIndex = m);
 }
 
-function showDivslead(n) {
+function showDivslead(m) {
   var i;
   var x = document.getElementsByClassName("myLeads");
   var dots = document.getElementsByClassName("demolead");
-  if (n > x.length) {leadIndex = 1}
-  if (n < 1) {leadIndex = x.length}
+  if (m > x.length) {leadIndex = 1}
+  if (m < 1) {leadIndex = x.length}
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";
   }
@@ -374,4 +374,119 @@ $('.demolead').click(function() {
     $('.demolead.w3-yellow').append($bolinha);
     $('.bolinha').css('opacity', '1');
 });
+
+
+
+
+
+      // Config
+      // =================================================
+
+      var $root          = $('html'),
+          $nav_header    = $('#homesliders'),
+          $navicon       = $('[data-navicon="button"]'),
+          homesliders    = $('#homesliders').height(),
+          lideres        = $('#lideres').height(),
+          trabalhos      = $('#trabalhos').height(),
+          lideresscroll  =  lideres + trabalhos,
+          $imgoff       = $(".currentpage>img"),
+          $textoff       = $(".currentpage>span"),
+          hero_height    = $('.hero').height(),
+          eventType      = ((document.ontouchstart !== null) ? 'click' : 'touchstart');
+
+
+      // Methods
+      // =================================================
+
+
+      function menuToggle() {
+        if($nav_header.hasClass('is-open')) {
+          $root.removeClass('pinned');
+          $nav_header.removeClass('is-open');
+          $navicon.removeClass('is--closed');
+        } else {
+          $root.addClass('pinned');
+          $nav_header.addClass('is-open');
+          $navicon.addClass('is--closed')
+        }
+      }
+
+      function openNav() {
+        if ($nav_header.hasClass('is-open')) {
+          $nav_header.removeClass('is-open');
+          $root.removeClass('pinned');
+          $navicon.removeClass('is--closed');
+        }
+      }
+
+      function anchorScroll(event) {
+        var id     = $(this).attr('href'),
+            offset = header_height,
+            target = $(id).offset().top - offset;
+
+        $('html, body').animate({
+          scrollTop: target
+        }, 500);
+
+        event.preventDefault();
+      }
+
+      function a (u) {
+        console.log('qualquercoisa');
+      }
+      // Handlers
+      // =================================================
+
+      $('.scrollto').on(eventType, function() {
+        anchorScroll.call(this, event);
+      });
+
+      $navicon.on(eventType, menuToggle);
+
+      $('.banner a').on(eventType, openNav);
+
+
+
+
+
+    function scrollwtf() {
+      wtf =  $(window).scrollTop();
+      console.log(wtf); 
+      return wtf; 
+    }
+
+    var homescrolling = $('.menu01>a');
+
+
+   $( document ).ready(function() {
+
+
+
+     $(window).scroll(function (argument) {
+
+         scrollwtf();
+
+          if ( wtf >= homesliders && wtf <= lideresscroll) {
+              homescrolling.removeClass('active');
+               homescrolling.children().removeClass('hovered');
+             $imgoff.attr('src', 'img/menu/ico02.gif');
+             $textoff.html('TRABALHOS');
+          }
+
+          else if ( wtf >= lideresscroll ) {
+              $imgoff.attr('src', 'img/menu/ico03.gif');
+               $textoff.html('LÍDERES');
+          }
+
+          else {
+              $imgoff.attr('src', 'img/menu/ico01.gif');
+               $textoff.html('HOME');
+                homescrolling.addClass('active');
+                homescrolling.children().addClass('hovered');
+
+          }
+
+
+       });
+    });
 

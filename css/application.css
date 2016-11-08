@@ -5890,6 +5890,9 @@ html {
   background-color: #191919;
   padding: 10px 39px; }
 
+.ui-link.active {
+  background-color: #131313; }
+
 .sidebar-nav li a span {
   padding-left: 20px;
   opacity: 0; }
@@ -6034,9 +6037,6 @@ html {
   width: 100%;
   height: 75px;
   background-color: #000000; }
-  @media screen and (max-width: 1024px) {
-    .controls02 {
-      top: 55vh; } }
 
 .mySlides {
   width: 80%;
@@ -6236,7 +6236,7 @@ ul.topnav {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #191919; }
+  background-color: #131313; }
 
 /* Float the list items side by side */
 ul.topnav li {
@@ -6248,7 +6248,7 @@ ul.topnav li a {
   display: inline-block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 16px 16px;
   text-decoration: none;
   transition: 0.3s;
   font-size: 17px; }
@@ -6533,29 +6533,32 @@ div.box.swipe {
   color: #fff;
   padding: 35px;
   padding-right: 120px; }
+  @media screen and (max-width: 1024px) {
+    .myLeads {
+      padding: 125px 80px 35px 35px; } }
 
 #lideres {
   background-color: #020000;
   height: 100vh;
   overflow: hidden; }
-  @media screen and (max-width: 1024px) {
-    #lideres {
-      height: 61vh; } }
 
 .lideresbg {
   background-color: #020000;
   background-image: url(img/lideres.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
   position: absolute;
-  height: 100vh; }
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center; }
   @media screen and (max-width: 1200px) {
     .lideresbg {
-      background-size: 100%; } }
-  @media screen and (max-width: 1024px) {
+      background-size: 120%;
+      background-position: bottom; } }
+  @media screen and (max-width: 600px) {
     .lideresbg {
-      height: 61vh; } }
+      display: none; } }
 
 .demolead, .demolead:hover {
   font-size: 1.7em;
@@ -6609,5 +6612,63 @@ div.box.swipe {
 
 .demolead.w3-yellow {
   color: #fecc0c; }
+
+.lowerlead {
+  width: 100%;
+  height: 100vh;
+  background-color: #444; }
+  @media screen and (min-width: 600px) {
+    .lowerlead {
+      display: none; } }
+
+.leadflex {
+  width: 100%;
+  height: 20vh;
+  background-color: #131313;
+  border: 2px solid #191919;
+  margin-top: -1px;
+  margin-left: -1px; }
+  .leadflex .desc {
+    width: auto;
+    padding-top: 4%; }
+    .leadflex .desc p {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase; }
+    .leadflex .desc span {
+      font-size: 12px;
+      color: #fecc0c;
+      text-transform: uppercase; }
+    .leadflex .desc hr {
+      width: 100%;
+      border-color: #fecc0c; }
+  .leadflex .left {
+    float: left; }
+  .leadflex .right {
+    float: right; }
+  .leadflex img {
+    height: 100%;
+    float: left;
+    border-left: 2px solid #191919; }
+  .leadflex .alpha {
+    text-align: right;
+    padding-right: 20px; }
+  .leadflex .beta {
+    text-align: left;
+    padding-left: 20px; }
+
+.currentpage {
+  float: right;
+  padding-right: 10px;
+  color: #fff;
+  line-height: 48px; }
+  .currentpage img {
+    padding-right: 10px; }
+  .currentpage span {
+    position: relative;
+    font-size: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
+    top: 4px; }
 
 /*# sourceMappingURL=application.css.map */
