@@ -379,11 +379,11 @@ function showDivslead(m) {
 var $bolinha = $('<div class="bolinha"></div>');
 
 
-$('.demolead:first-child.w3-yellow').append($bolinha);
+$('.demolead:first-child').append($bolinha);
 
 $('.demolead').click(function() {
     $('.bolinha').css('opacity', '0');
-    $('.demolead.w3-yellow').append($bolinha);
+    $('.demolead.w3-yellow').append($bolinha); 
     $('.bolinha').css('opacity', '1');
 });
 
@@ -580,8 +580,6 @@ $('.demolead').click(function() {
     $(".contatolinkup").click(function() {
        scrollToAnchor('contatolinkdown');
     });
-
-
 
 
 

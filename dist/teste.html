@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Override Chrome/IOS Address Bar Autohide</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <style>
+      html,body{
+  height:100%; 
+  overflow:hidden;
+  background:red;
+}
+body{
+  height:100%;
+}
+h1{
+  color:white;
+  font-size:65px;
+  font-family:arial;
+}
+#bg{
+  position: fixed;
+  left: 50%;
+  bottom: 0px;
+  min-width: 100%;
+  min-height: 120%;
+  z-index: 0;
+  background: url(http://codeandpen.com/uploads/background.gif);
+  margin-left: -50%;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+  -moz-background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  }
+#main_container{
+  width:inherit;
+  height:inherit;
+  overflow-y:scroll;
+}
+.block {
+  position:relative;
+  text-align: center;
+  background: transparent;
+  height:100%;
+  z-index:9;
+}
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
+ }
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+ }
+
+.block .circle{
+  float:left;
+  width:175px;
+  height:175px;
+  border-radius:200px;
+  background:rgba(224,224,224,.4);
+}
+.g{
+  background:rgba(224,224,224,.4);
+}
+@media all and (max-width: 699px){
+.menu{
+  
+}  
+
+  .block:before {
+    content: none;
+  }
+  .centered{
+  }
+}
+    </style>
+
+  
+  
+  
+  
+</head>
+
+<body translate="no" >
+
+  <div id="main_container">
+<div class="block active" >
+  <div class="centered">
+    <div class="menu">
+    <div class="circle"> </div>
+    <div class="circle"> </div>
+    <div class="circle"> </div>
+    <div class="circle"> </div>
+    </div>
+  </div>
+</div>
+<div class="block next g">  
+  <div class="centered">
+    <h1>Some text</h1>
+  </div>
+</div>
+<div class="block">  
+  <div class="centered">
+    <h1>Some text</h1>
+  </div>
+</div>
+<div class="block g">  
+  <div class="centered">
+    <h1>Some text</h1>
+  </div>
+</div>
+<div class="block" >
+  <div class="centered">
+    <h1>Some text</h1> 
+  </div>
+</div>
+  </div>
+<div id="bg"></div>
+  
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script>
+    //$('#main_container').on("scroll", check_scroll_down);
+pos_array = [];
+active_slide = 1;
+
+$('.block').each(function(){
+   pos_array.push($(this).offset().top);
+});
+console.log(pos_array);
+
+
+function check_scroll_down(){
+  active_pos = $('.next').offset().top;
+  tolerance = $('.active').height() * 0.5;
+  upper_tolerance = $('.active').height() * 0.25;
+  console.log(active_pos);
+  console.log(tolerance);
+  if(active_pos <= upper_tolerance ){
+    console.log("start looking if we go in reverse");
+  }
+ // console.log(tolerance);
+  if(active_pos <= tolerance){
+    hop_to_next(pos_array[active_slide]);
+    console.log("scroll to next joint");
+    $('#main_container').off("scroll", check_scroll_down);
+  }
+}
+
+function hop_to_next(scroll_pos){
+  console.log(scroll_pos);
+  active_slide += 1;
+  $('#main_container').stop().animate({
+    scrollTop : scroll_pos
+    
+  }, function(){
+    $('.block.active').removeClass("active");;
+    $('.block.next').removeClass("next").addClass("active").next().addClass("next");
+    $('#main_container').on("scroll", check_scroll_pos);
+    
+  });
+  
+}
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 
