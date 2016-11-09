@@ -6135,16 +6135,23 @@ html {
   background-color: #ffffff;
   border: none;
   border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -khtml-border-radius: 20px;
   width: 15px;
   height: 15px;
-  margin-right: 5px; }
+  margin-right: 5px;
+  -webkit-appearance: none; }
 
 .w3-btn:hover {
   background-color: #e0b51f;
   border: none;
-  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -khtml-border-radius: 20px;
   width: 15px;
-  height: 15px; }
+  height: 15px;
+  -webkit-appearance: none; }
 
 .w3-red {
   background-color: #e0b51f; }
@@ -6390,12 +6397,12 @@ ul.topnav li.icon {
         .videoport .lowerport span {
           float: left;
           width: 100%;
-          font-size: 0.8em; } }
-      @media screen and (max-width: 460px) {
+          font-size: 1em; } }
+      @media screen and (max-width: 370px) {
         .videoport .lowerport span {
           float: left;
           width: 100%;
-          font-size: 1em; } }
+          font-size: 0.7em; } }
     .videoport .lowerport hr {
       width: 20%;
       height: 2px;
@@ -6644,6 +6651,9 @@ div.box.swipe {
       @media screen and (max-width: 600px) {
         .leadflex .desc p {
           font-size: 1.4em; } }
+      @media screen and (max-width: 370px) {
+        .leadflex .desc p {
+          font-size: 1em; } }
     .leadflex .desc span {
       font-size: 12px;
       color: #fecc0c;
