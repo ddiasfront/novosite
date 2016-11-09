@@ -5830,8 +5830,7 @@ ul,
 ol {
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
-  background-color: #191919; }
+  font-family: "Source Sans Pro", sans-serif; }
 
 html {
   font-family: "Source Sans Pro", sans-serif; }
@@ -6740,9 +6739,66 @@ div.box.swipe {
   background-color: #333; }
 
 #contato {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: #222; }
+  #contato .ico {
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-image: url(img/social.png); }
+  #contato .facebook {
+    background-position: 0px 0px; }
+  #contato .instagram {
+    background-position: -68px 0px; }
+  #contato .vimeo {
+    background-position: -128px 0px; }
+  #contato .spotify {
+    background-position: -198px 0px; }
+  #contato .linkedin {
+    background-position: -259px 0px; }
+  #contato .infobox {
+    width: 27%;
+    height: 100%;
+    background-color: #000000;
+    float: left;
+    padding: 3.5%;
+    -webkit-box-shadow: 10px 0px 9px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 10px 0px 9px 0px rgba(0, 0, 0, 0.18);
+    box-shadow: 10px 0px 9px 0px rgba(0, 0, 0, 0.18);
+    position: relative;
+    z-index: 9999999999; }
+    #contato .infobox .info {
+      height: 15vh;
+      width: 100%;
+      text-transform: uppercase; }
+      #contato .infobox .info p {
+        font-size: 1.2em;
+        color: #aeaeae;
+        margin-bottom: 10px; }
+      #contato .infobox .info span {
+        font-size: 0.9em;
+        color: #fff; }
+      #contato .infobox .info hr {
+        border-color: #fecc0c;
+        width: 20px;
+        margin: 0;
+        padding-bottom: 15px; }
+    #contato .infobox .social {
+      width: 100%;
+      height: 40px;
+      padding-bottom: 30%; }
+      #contato .infobox .social .omega {
+        padding-right: 0; }
+      #contato .infobox .social li {
+        float: left;
+        list-style: none;
+        padding-right: 14%; }
+  #contato .mapbox {
+    width: 72.9%;
+    height: 100%;
+    background-color: #777777;
+    float: left; }
 
 .nound {
   text-decoration: none; }

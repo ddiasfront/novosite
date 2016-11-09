@@ -39,7 +39,6 @@ ol {
    margin: 0;
   padding: 0;
   font-family: $font-stack;
-  background-color: #191919;
 }
 
 html {
@@ -1176,15 +1175,104 @@ margin-left: -1px;
 }
 
 #contato {
-  width: 100%;
+
+  width: 100vw;
   height: 100vh;
   background-color: #222;
 
+    .ico {
+      width: 30px;
+      height: 30px;
+      float: left;
+      background-image: url(img/social.png);
+    }
 
+              .facebook {
+            background-position: 0px 0px;
+          }
+
+          .instagram {
+            background-position: -68px 0px;
+          }
+
+          .vimeo {
+            background-position: -128px 0px;
+          }
+
+          .spotify {
+                background-position: -198px 0px;
+          }
+
+          .linkedin {
+            background-position: -259px 0px;
+
+          }
+
+    .infobox {
+      width: 27%;
+      height: 100%;
+      background-color: #000000;
+      float: left;
+      padding: 3.5%;
+      -webkit-box-shadow: 10px 0px 9px 0px rgba(0,0,0,0.18);
+      -moz-box-shadow: 10px 0px 9px 0px rgba(0,0,0,0.18);
+      box-shadow: 10px 0px 9px 0px rgba(0,0,0,0.18);
+      position: relative;
+      z-index: 9999999999;
+
+      .info {
+
+      height: 15vh;
+      width: 100%;
+
+            text-transform: uppercase;
+          p {
+            font-size: 1.2em;
+            color: #aeaeae;
+            margin-bottom: 10px;
+          }
+          span {
+            font-size: 0.9em;
+            color: #fff;
+          }
+
+          hr {
+            border-color: #fecc0c;
+            width: 20px;
+            margin:0;
+            padding-bottom: 15px;
+          }
+      }
+
+      .social  {
+
+        width: 100%;
+        height: 40px;
+        padding-bottom: 30%;
+         .omega {
+                padding-right: 0;
+               }
+        li {
+          float: left;
+          list-style: none;
+          padding-right: 14%;
+
+        }
+      }
+    }
+
+    .mapbox {
+      width: 72.9%;
+      height: 100%;
+      background-color: #777777;
+      float: left;
+    }
 
 }
 
 .nound {
   text-decoration: none;
 }
+
+
 
