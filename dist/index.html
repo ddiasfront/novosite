@@ -12,14 +12,14 @@
 
   <section id="menumobile">
     <ul class="topnav" id="myTopnav">
-      <li><a onclick="myFunction()" href="#logo"><img class="logo02" src="img/logo.png" alt=""></a></li>
-      <li><a onclick="myFunction()" href="#home">HOME</a></li>
-      <li><a onclick="myFunction()" href="#news">A AGÊNCIA</a></li>
-      <li><a onclick="myFunction()" href="#contact">TRABALHOS</a></li>
-      <li><a onclick="myFunction()" href="#about">LÍDERES</a></li>
-      <li><a onclick="myFunction()" href="#about">CLIENTES</a></li>
-      <li><a onclick="myFunction()" href="#about">VAGAS</a></li>
-      <li><a onclick="myFunction()" href="#about">CONTATO</a></li>
+      <li><a onclick="myFunction()" href=""><img class="logo02" src="img/logo.png" alt=""></a></li>
+      <li><a onclick="myFunction()" href="" class="homelinkup">HOME</a></li>
+      <li><a onclick="myFunction()" href="" class="agencialinkup">A AGÊNCIA</a></li>
+      <li><a onclick="myFunction()" href="" class="trabalhoslinkup">TRABALHOS</a></li>
+      <li><a onclick="myFunction()" href="" class="lidereslinkup">LÍDERES</a></li>
+      <li><a onclick="myFunction()" href="" class="clienteslinkup">CLIENTES</a></li>
+      <li><a onclick="myFunction()" href="">VAGAS</a></li>
+      <li><a onclick="myFunction()" href="" class="contatolinkup">CONTATO</a></li>
 
       <li class="icon">
         <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
@@ -36,37 +36,37 @@
           <nav id="spy">
               <ul class="sidebar-nav nav">
                   <li class="menu01">
-                      <a href="#anch1">
+                      <a href="#homesliders" class="homelinkup">
                          <div class="i-menu homei"></div> <span class="fa fa-anchor solo">HOME</span>
                       </a>
                   </li>
                   <li class="menu02">
-                      <a href="#anch2">
+                      <a href="#agencia" class="agencialinkup">
                           <div class="i-menu agenciai"></div><span class="fa fa-anchor solo">A AGÊNCIA</span>
                       </a>
                   </li>
                   <li class="menu03">
-                      <a href="#anch3">
+                      <a href="" class="trabalhoslinkup">
                           <div class="i-menu trabalhosi"></div><span class="fa fa-anchor solo">TRABALHOS</span>
                       </a>
                   </li>
                   <li class="menu04">
-                      <a href="#anch4">
+                      <a href="" class="lidereslinkup">
                           <div class="i-menu lideresi"></div><span class="fa fa-anchor solo">LÍDERES</span>
                       </a>
                   </li>
                   <li class="menu05">
-                      <a href="#anch4">
+                      <a href="#clientes" class="clienteslinkup">
                           <div class="i-menu clientesi"></div><span class="fa fa-anchor solo">CLIENTES</span>
                       </a>
                   </li>
                   <li class="menu06">
-                      <a href="#anch4">
+                      <a href="#">
                           <div class="i-menu vagasi"></div><span class="fa fa-anchor solo">VAGAS</span>
                       </a>
                   </li>
                   <li class="menu07">
-                      <a href="#anch4">x
+                      <a href="#contato" class="contatolinkup">
                           <div class="i-menu contatoi"></div><span class="fa fa-anchor solo">CONTATO</span>
                       </a>
                   </li>
@@ -86,7 +86,7 @@
                       <button class="w3-btn demo" onclick="currentDiv(2)"></button>
                       <button class="w3-btn demo" onclick="currentDiv(3)"></button>
                     </div>
-                
+                     <a name="homelinkdown"/>
                     <img class="logo" src="img/logo.png" alt="">
                   
                   <div class="mySlides">
@@ -129,7 +129,12 @@
       </div>
     </section>
 
+    <section id="agencia">
+      <a name="agencialinkdown"/>
+    </section>
+
     <section id="trabalhos">
+      <a name="trabalhoslinkdown"/>
 
       <div class="flexes blue videoport port01h">
         <div class="lowerport port01">
@@ -178,6 +183,7 @@
     </section>
 
     <section id="lideres">
+      <a name="lidereslinkdown"/>
         <div class="lowerlead">
             <div class="leadflex">
                 <img class="right" src="img/ricardo.jpg"><div class="desc right alpha"><p>Ricardo <br/>Calfat </p><hr/><span>VP DE OPERAÇÕES</span></div>
@@ -211,6 +217,25 @@
           <a class="demolead" onclick="currentDivLead(5)">Marcelo Tripoli</a>
         </div>
     </section>
+
+    <section id="clientes">
+       <a name="clienteslinkdown"/>
+        <h4>alguns de nossos clientes:</h4><br/><hr/>
+        <div class="logocliente"></div>
+        <div class="logocliente"></div>
+        <div class="logocliente"></div>
+        <div class="logocliente"></div>
+        <div class="logocliente"></div>
+        <div class="logocliente"></div>
+        <div class="logocliente"></div>
+        <div class="logocliente"></div>
+    </section>
+
+    <section id="contato">
+      <a name="contatolinkdown"/>
+    </section>
+
+
 </div>
 
 
@@ -223,25 +248,9 @@
 <script type="text/javascript">
 
 
-$( document ).on( "pagecreate", "html", function() {
-
-  
-    $("#homesliders").on( "swiperight", function( event ) {
-         avancar(1);
-    });
-  $("#homesliders").on( "swipeleft", function( event ) {
-         voltar(1);
-    });
-
-
-});
 
 </script>
 
-<script type="text/javascript">
-
-
-</script>
 
 </body>
 </html>

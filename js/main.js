@@ -1,4 +1,19 @@
 
+$( document ).on( "pagecreate", "html", function() {
+
+  
+  $("#homesliders").on( "swiperight", function( event ) {
+       avancar(1);
+  });
+
+  $("#homesliders").on( "swipeleft", function( event ) {
+         voltar(1);
+    });
+
+
+});
+
+
 
 // MENU DESKTOP
 $(".sidebar-nav li a").click(function() {
@@ -374,22 +389,28 @@ $('.demolead').click(function() {
 
 
 
+// MENU MOBILE / DESK -- AUTOMATIC SCROLLING
+//  =================================================
 
 
       // Config
       // =================================================
 
-      var $root          = $('html'),
-          $nav_header    = $('#homesliders'),
-          $navicon       = $('[data-navicon="button"]'),
-          homesliders    = $('#homesliders').height(),
-          lideres        = $('#lideres').height(),
-          trabalhos      = $('#trabalhos').height(),
-          lideresscroll  =  lideres + trabalhos,
-          $imgoff       = $(".currentpage>img"),
-          $textoff       = $(".currentpage>span"),
-          hero_height    = $('.hero').height(),
-          eventType      = ((document.ontouchstart !== null) ? 'click' : 'touchstart');
+      var $root           = $('html'),
+          $nav_header     = $('#homesliders'),
+          $navicon        = $('[data-navicon="button"]'),
+          homesliders     = $('#homesliders').height(),
+          lideres         = $('#lideres').height(),
+          trabalhos       = $('#trabalhos').height(),
+          agenciaoffset   = lideres * 2 - 100,
+          trabalhosoffset = lideres * 3 - 100,
+          lideresoffset   = lideres * 4 - 100,
+          clientesoffset  = lideres * 5 - 100,
+          contatooffset   = lideres * 6 - 100,
+          $imgoff         = $(".currentpage>img"),
+          $textoff        = $(".currentpage>span"),
+          hero_height     = $('.hero').height(),
+          eventType       = ((document.ontouchstart !== null) ? 'click' : 'touchstart');
 
 
       // Methods
@@ -470,33 +491,99 @@ $('.demolead').click(function() {
 
          scrollwtf();
 
-          if ( wtf >= homesliders && wtf <= lideresscroll) {
+          if ( wtf >= homesliders && wtf <= agenciaoffset) {
               alllinks.removeClass('active');
               alllinks.children().removeClass('hovered');
               agenciacrolling.addClass('active');
               agenciacrolling.children().addClass('hovered');
              $imgoff.attr('src', 'img/menu/ico02.gif');
-             $textoff.html('TRABALHOS');
+             $textoff.html('AGÊNCIA');
           }
 
-          else if ( wtf >= lideresscroll ) {
+          else if ( wtf >= agenciaoffset && wtf <= trabalhosoffset) {
               alllinks.removeClass('active');
               alllinks.children().removeClass('hovered');
+              trabalhocrolling.addClass('active');
+              trabalhocrolling.children().addClass('hovered');
               $imgoff.attr('src', 'img/menu/ico03.gif');
+              $textoff.html('TRABALHOS');
+          }
+
+          else if ( wtf >= trabalhosoffset && wtf <= lideresoffset ) {
+              alllinks.removeClass('active');
+              alllinks.children().removeClass('hovered');
+              leadscrolling.addClass('active');
+              leadscrolling.children().addClass('hovered');
+              $imgoff.attr('src', 'img/menu/ico04.gif');
               $textoff.html('LÍDERES');
           }
 
-          else {
-                          alllinks.removeClass('active');
-               alllinks.children().removeClass('hovered');
-              $imgoff.attr('src', 'img/menu/ico01.gif');
-               $textoff.html('HOME');
-                homescrolling.addClass('active');
-                homescrolling.children().addClass('hovered');
-
+          else if ( wtf >= lideresoffset && wtf <= clientesoffset ) {
+              alllinks.removeClass('active');
+              alllinks.children().removeClass('hovered');
+              clientescrolling.addClass('active');
+              clientescrolling.children().addClass('hovered');
+              $imgoff.attr('src', 'img/menu/ico04.gif');
+              $textoff.html('CLIENTES');
           }
 
+          else if ( wtf >= clientesoffset && wtf <= contatooffset ) {
+              alllinks.removeClass('active');
+              alllinks.children().removeClass('hovered');
+              contatoscrolling.addClass('active');
+              contatoscrolling.children().addClass('hovered');
+              $imgoff.attr('src', 'img/menu/ico04.gif');
+              $textoff.html('CONTATO');
+          }
 
+          else {
+              alllinks.removeClass('active');
+              alllinks.children().removeClass('hovered');
+              $imgoff.attr('src', 'img/menu/ico01.gif');
+              $textoff.html('HOME');
+              homescrolling.addClass('active');
+              homescrolling.children().addClass('hovered');
+          }
        });
     });
+
+
+// ANCHORS
+//  =================================================
+
+    function scrollToAnchor(aid){
+        var aTag = $("a[name='"+ aid +"']");
+        $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+    }
+
+    $(".trabalhoslinkup").click(function() {
+       scrollToAnchor('trabalhoslinkdown');
+    });
+
+
+    $(".agencialinkup").click(function() {
+       scrollToAnchor('agencialinkdown');
+    });
+
+    $(".homelinkup").click(function() {
+       scrollToAnchor('homelinkdown');
+    });
+
+    $(".lidereslinkup").click(function() {
+       scrollToAnchor('lidereslinkdown');
+    });
+
+    $(".clienteslinkup").click(function() {
+       scrollToAnchor('clienteslinkdown');
+    });
+
+    $(".contatolinkup").click(function() {
+       scrollToAnchor('contatolinkdown');
+    });
+
+
+
+
+
+
 
