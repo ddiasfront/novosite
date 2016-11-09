@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8"/>
 </head>
-<body data-role="page">
+<body data-role="page" >
 <div id="wrapper">
 
-  <section id="menumobile">
-    <ul class="topnav" id="myTopnav">
+  <section id="menumobile" data-fullscreen="true" data-position="fixed">
+    <ul class="topnav ui-content" id="myTopnav">
       <li><a onclick="myFunction()" href=""><img class="logo02" src="img/logo.png" alt=""></a></li>
       <li><a onclick="myFunction()" href="" class="homelinkup">HOME</a></li>
       <li><a onclick="myFunction()" href="" class="agencialinkup">A AGÊNCIA</a></li>
@@ -183,7 +183,7 @@
     </section>
 
     <section id="lideres">
-      <a name="lidereslinkdown" class="nound"/>
+     
         <div class="lowerlead">
             <div class="leadflex">
                 <img class="right" src="img/ricardo.jpg"><div class="desc right alpha"><p>Ricardo <br/>Calfat </p><hr/><span>VP DE OPERAÇÕES</span></div>
@@ -216,10 +216,11 @@
           <a class="demolead" onclick="currentDivLead(4)">Renato Pereira</a>
           <a class="demolead" onclick="currentDivLead(5)">Marcelo Tripoli</a>
         </div>
+         <a name="lidereslinkdown" class="nound"/>
     </section>
 
     <section id="clientes">
-       <a name="clienteslinkdown" class="nound"/>
+       <a name="clienteslinkdown" class="nound"></a>
         <h4>alguns de nossos clientes:</h4><br/><hr/>
         <div class="logocliente"></div>
         <div class="logocliente"></div>
@@ -245,7 +246,6 @@
 <script src="main.min.js"></script>
 
 
-<script type="text/javascript">
 
 </script>
 
