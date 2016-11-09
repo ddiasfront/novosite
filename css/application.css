@@ -6043,6 +6043,8 @@ html {
 .mySlides {
   width: 80%;
   padding-top: 12vh; }
+  .mySlides a:focus, .mySlides a:hover {
+    text-decoration: none; }
   @media screen and (max-width: 460px) {
     .mySlides {
       padding-top: 17vh; } }
@@ -6055,7 +6057,10 @@ html {
   font-size: 2.8em;
   text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  text-decoration: none; }
+  .mySlides h3:hover {
+    text-decoration: none; }
   @media screen and (min-width: 1300px) {
     .mySlides h3 {
       font-size: 4em;
@@ -6634,7 +6639,7 @@ div.box.swipe {
     width: auto;
     padding-top: 4%; }
     .leadflex .desc p {
-      font-size: 20px;
+      font-size: 2em;
       color: #fff;
       text-transform: uppercase; }
     .leadflex .desc span {
@@ -6716,5 +6721,8 @@ div.box.swipe {
   width: 100%;
   height: 100vh;
   background-color: #222; }
+
+.nound {
+  text-decoration: none; }
 
 /*# sourceMappingURL=application.css.map */

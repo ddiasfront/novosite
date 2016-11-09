@@ -307,6 +307,10 @@ height: 35px;
 .mySlides {
   width: 80%;
   padding-top: 12vh;
+
+  a:focus, a:hover {
+    text-decoration:none;
+  }
    @media screen and (max-width: $break-small) {
             padding-top: 17vh;
     }
@@ -321,6 +325,11 @@ height: 35px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
+  text-decoration: none;
+
+  &:hover {
+      text-decoration: none;
+  }
 
     @media screen and (min-width: $break-h3) {
       font-size:4em;
@@ -1027,9 +1036,10 @@ margin-left: -1px;
         padding-top: 4%;
 
         p {
-          font-size: 20px;
+          font-size: 2em;
           color: #fff;
-          text-transform: uppercase;
+          text-transform: uppercase;     
+
         }
 
         span {
@@ -1147,4 +1157,7 @@ margin-left: -1px;
 
 }
 
+.nound {
+  text-decoration: none;
+}
 
