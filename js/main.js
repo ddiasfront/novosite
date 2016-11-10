@@ -379,7 +379,7 @@ function showDivslead(m) {
 var $bolinha = $('<div class="bolinha"></div>');
 
 
-$('.demolead:first-child').append($bolinha);
+$('.demolead.calfat').append($bolinha);
 
 $('.demolead').click(function() {
     $('.bolinha').css('opacity', '0');
