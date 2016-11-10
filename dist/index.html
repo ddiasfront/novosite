@@ -13,13 +13,13 @@
   <section id="menumobile" data-fullscreen="true" data-position="fixed">
     <ul class="topnav ui-content" id="myTopnav">
       <li><a onclick="myFunction()" href=""><img class="logo02" src="img/logo.png" alt=""></a></li>
-      <li><a onclick="myFunction()" href="" class="homelinkup">HOME</a></li>
-      <li><a onclick="myFunction()" href="" class="agencialinkup">A AGÊNCIA</a></li>
-      <li><a onclick="myFunction()" href="" class="trabalhoslinkup">TRABALHOS</a></li>
-      <li><a onclick="myFunction()" href="" class="lidereslinkup">LÍDERES</a></li>
-      <li><a onclick="myFunction()" href="" class="clienteslinkup">CLIENTES</a></li>
+      <li><a onclick="myFunction()" href="" class="homelinkup btnRoll" data-local="homelinkdown">HOME</a></li>
+      <li><a onclick="myFunction()" href="" class="agencialinkup btnRoll" data-local="agencialinkdown">A AGÊNCIA</a></li>
+      <li><a onclick="myFunction()" href="" class="trabalhoslinkup btnRoll" data-local="trabalhoslinkdown">TRABALHOS</a></li>
+      <li><a onclick="myFunction()" href="" class="lidereslinkup btnRoll" data-local="lidereslinkdown">LÍDERES</a></li>
+      <li><a onclick="myFunction()" href="" class="clienteslinkup btnRoll" data-local="clienteslinkdown">CLIENTES</a></li>
       <li><a onclick="myFunction()" href="">VAGAS</a></li>
-      <li><a onclick="myFunction()" href="" class="contatolinkup">CONTATO</a></li>
+      <li><a onclick="myFunction()" href="" class="contatolinkup btnRoll" data-local="contatolinkdown">CONTATO</a></li>
 
       <li class="icon">
         <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
@@ -134,6 +134,9 @@
 
     <section id="agencia">
       <a name="agencialinkdown"/></a>
+      <div class="ag01"></div>
+      <div class="ag02"></div>
+      <div class="bgabsolute"></div>
     </section>
 
     <section id="trabalhos">
@@ -226,24 +229,26 @@
     <section id="clientes">
        <a name="clienteslinkdown" class="nound"></a>
         <h4>alguns de nossos clientes:</h4><br/><hr/>
-        <div class="logocliente"></div>
-        <div class="logocliente"></div>
-        <div class="logocliente"></div>
-        <div class="logocliente"></div>
-        <div class="logocliente"></div>
-        <div class="logocliente"></div>
-        <div class="logocliente"></div>
-        <div class="logocliente"></div>
+        <div class="logocontainer">
+          <div class="logocliente"><img src="https://placeholdit.imgix.net/~text?txtsize=60&txt=LOGO&w=300&h=300&txttrack=0" alt=""></div>
+          <div class="logocliente"><img src="https://placeholdit.imgix.net/~text?txtsize=60&txt=LOGO&w=300&h=300&txttrack=0" alt=""></div>
+          <div class="logocliente"><img src="https://placeholdit.imgix.net/~text?txtsize=60&txt=LOGO&w=300&h=300&txttrack=0" alt=""></div>
+          <div class="logocliente"><img src="https://placeholdit.imgix.net/~text?txtsize=60&txt=LOGO&w=300&h=300&txttrack=0" alt=""></div>
+          <div class="logocliente"><img src="https://placeholdit.imgix.net/~text?txtsize=60&txt=LOGO&w=300&h=300&txttrack=0" alt=""></div>
+          <div class="logocliente"><img src="https://placeholdit.imgix.net/~text?txtsize=60&txt=LOGO&w=300&h=300&txttrack=0" alt=""></div>
+          <div class="logocliente"><img src="https://placeholdit.imgix.net/~text?txtsize=60&txt=LOGO&w=300&h=300&txttrack=0" alt=""></div>
+          <div class="logocliente"><img src="https://placeholdit.imgix.net/~text?txtsize=60&txt=LOGO&w=300&h=300&txttrack=0" alt=""></div>
+        </div>
     </section>
 
     <section id="contato">
       <a name="contatolinkdown" class="nound"/></a>
       <div class="infobox">
           <ul class="social">
-            <li><div class="ico facebook"></div></li>
-            <li><div class="ico instagram"></div></li>
-            <li><div class="ico vimeo"></div></li>
-            <li><div class="ico spotify"></div></li>
+            <li><a class="ico facebook"></a></li>
+            <li><a class="ico instagram"></a></li>
+            <li><a class="ico vimeo"></a></li>
+            <li><a class="ico spotify"></a></li>
             <li class="omega"><div class="ico linkedin "></div></li>
           </ul>
 
@@ -252,7 +257,7 @@
             <p>são paulo</p>
             <hr/>
             <span>
-              Av. Brigadeiro Luis Antônio, 4524 <br/>
+              Av. Brigadeiro Luis Antônio, 4524
               Jd. Paulista - São Paulo - SP - Brasil <br/>
               +55 11 3045.2515
             </span>
