@@ -330,62 +330,59 @@ $(".port04h").hover(function(){
 
 // sliderLIDERES
 
-var demolead = $('.demolead').length;
-var leadIndex = 1;
+  // var demolead = $('.demolead').length;
+  // var leadIndex = 1;
 
-showDivslead(leadIndex);
+  // showDivslead(leadIndex);
 
-function avancarlead(m) {
-  if (m == demonum){
-    return;
-  }
-  else {
-     showDivslead(leadIndex += m);
-  }
- 
-}
+  // function avancarlead(m) {
+  //   if (m == demonum){
+  //     return;
+  //   }
+  //   else {
+  //      showDivslead(leadIndex += m);
+  //   }
+   
+  // }
 
-function voltarlead(m) {
-  if (m >= 1) {
-    showDivslead(leadIndex -= m);
-  }
-  else {
-    return;
-  }
-  
-}
+  // function voltarlead(m) {
+  //   if (m >= 1) {
+  //     showDivslead(leadIndex -= m);
+  //   }
+  //   else {
+  //     return;
+  //   }
+    
+  // }
 
-function currentDivLead(m) {
-  showDivslead(leadIndex = m);
-}
+  // function currentDivLead(m) {
+  //   showDivslead(leadIndex = m);
+  // }
 
-function showDivslead(m) {
-  var i;
-  var x = document.getElementsByClassName("myLeads");
-  var dots = document.getElementsByClassName("demolead");
-  if (m > x.length) {leadIndex = 1}
-  if (m < 1) {leadIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace("w3-yellow", "");
-  }
-  x[leadIndex-1].style.display = "block";
-  dots[leadIndex-1].className += " w3-yellow";
+  // function showDivslead(m) {
+  //   var i;
+  //   var x = document.getElementsByClassName("myLeads");
+  //   var dots = document.getElementsByClassName("demolead");
+  //   if (m > x.length) {leadIndex = 1}
+  //   if (m < 1) {leadIndex = x.length}
+  //   for (i = 0; i < x.length; i++) {
+  //      x[i].style.display = "none";
+  //   }
+  //   for (i = 0; i < dots.length; i++) {
+  //      dots[i].className = dots[i].className.replace("w3-yellow", "");
+  //   }
+  //   x[leadIndex-1].style.display = "block";
+  //   dots[leadIndex-1].className += " w3-yellow";
 
-}
+  // }
 
-var $bolinha = $('<div class="bolinha"></div>');
+// var $bolinha = $('<div class="bolinha"></div>');
 
-
-$('.demolead.calfat').append($bolinha);
-
-$('.demolead').click(function() {
-    $('.bolinha').css('opacity', '0');
-    $('.demolead.w3-yellow').append($bolinha); 
-    $('.bolinha').css('opacity', '1');
-});
+// $('.demolead').click(function() {
+//     $('.bolinha').css('opacity', '0');
+//     $('.demolead.w3-yellow').append($bolinha); 
+//     $('.bolinha').css('opacity', '1');
+// });
 
 
 

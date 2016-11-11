@@ -302,12 +302,52 @@ height: 35px;
 
 .controls02 {
     position: relative;
-    z-index: 9999;
-    bottom: -90vh;
-    width: 100%;
+    top: 90vh;
+    z-index: 99;
+   @include span-columns(12);
     height: 10vh;
     background-color: #000000;        
+    opacity: 0.9;
+    padding-left: 60px;
+
 }
+
+
+.myLeads {
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+    background-color: #000000;        
+    bottom: -62vh;
+    height: 26vh;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    .photolead {
+      height: 100%; 
+      border-radius: 80px;
+      float: left;
+    }
+
+    .texticon {
+      float: left;
+      width: 86%;
+      color: #fff;
+      padding-left: 35px;
+
+      p {
+        padding-top: 15px;
+      }
+
+      .icons img {
+        padding-right:10px;
+        padding-bottom: 10px;
+      }
+    }
+}
+
 
 .mySlides {
   width: 80%;
@@ -926,60 +966,72 @@ div.box {
 
 }
 
-.myLeads {
-  color: #fff;
-  padding: 35px;
-  padding-right: 120px;
-  position: relative;
-  top: 4vh;
-    @media screen and (max-width: $break-lower) {
-        padding: 125px 80px 35px 35px;
-    }
-}
+// .myLeads {
+//   color: #fff;
+//   padding: 35px;
+//   padding-right: 120px;
+//   position: relative;
+//   top: 4vh;
+//     @media screen and (max-width: $break-lower) {
+//         padding: 125px 80px 35px 35px;
+//     }
+// }
 
 #lideres {
 background-color: #020000;
 height: 100vh;
 overflow:hidden;    
-
-
-}
-
-.lideresbg {
   background-color: #020000;
   background-image: url(img/lideres.jpg);
   background-repeat:no-repeat;
   background-size: cover;
-  position: absolute;
   height: 100vh;
-
+  width: 100vw; 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: center;
-
-      @media screen and (max-width: $break-medium) {
-              background-size: 120%;
-              background-position:bottom;
-      }
-            @media screen and (max-width: $break-smallvile) {
-              display: none;
-      }
-            @media screen and (min-width: $break-higher) {
-             width: 100vw;
-      }
-
+    background-position: 100% 70%;
 
 }
 
+// .lideresbg {
+//   background-color: #020000;
+//   background-image: url(img/lideres.jpg);
+//   background-repeat:no-repeat;
+//   background-size: cover;
+//   position: absolute;
+//   height: 100vh;
+//   width: 100vw; 
+//     /* Create the parallax scrolling effect */
+//     background-attachment: fixed;
+//     background-position: 100% 70%;
+
+//       @media screen and (max-width: $break-medium) {
+//               background-size: 120%;
+//               background-position:bottom;
+//       }
+//             @media screen and (max-width: $break-smallvile) {
+//               display: none;
+//       }
+//             @media screen and (min-width: $break-higher) {
+//              width: 100vw;
+//       }
+
+
+// }
+
 .demolead, .demolead:hover {
-  font-size: 1.7em;
+  font-size: 1.2em;
   color: #fff;
   text-transform: uppercase;
-  width: 20%;
   float: left;
   text-decoration: none;
   text-align: center;
-  margin-top: 2.5vh;
+  margin-top: 3.5vh;
+    @include span-columns(2 of 12);
+
+  &.omega {
+    padding-right: 0;
+  }
 
 
     @media screen and (max-width: $break-h3) {
@@ -1012,13 +1064,12 @@ overflow:hidden;
     border-radius: 20px;
     z-index: 99999999999999999999;
     position: relative;
-    width: 20px;
-    height: 20px;
-    /* bottom: 60%; */
-    bottom: 60px;
+    width: 40px;
+    height: 40px;
+    bottom: 6vh;
     left: 50%;
+    float: left;
     opacity: 1;
-    transition: all 2s 2s;
 
       @media screen and (max-width: $break-medium) {
    top: -50px;
