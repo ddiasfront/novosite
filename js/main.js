@@ -449,9 +449,6 @@ $('.demolead').click(function() {
         event.preventDefault();
       }
 
-      function a (u) {
-        console.log('qualquercoisa');
-      }
       // Handlers
       // =================================================
 
@@ -469,7 +466,6 @@ $('.demolead').click(function() {
 
     function scrollwtf() {
       wtf =  $(window).scrollTop();
-      console.log(wtf); 
       return wtf; 
     }
 
