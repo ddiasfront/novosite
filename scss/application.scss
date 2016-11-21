@@ -302,13 +302,18 @@ height: 35px;
 
 .controls02 {
     position: relative;
-    top: 90vh;
     z-index: 99;
    @include span-columns(12);
     height: 10vh;
     background-color: #000000;        
     opacity: 0.9;
-    padding-left: 60px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+          @media screen and (max-width: $break-smallvile) {
+           display: none;
+          }
+
 
 }
 
@@ -317,18 +322,52 @@ height: 35px;
     position: relative;
     z-index: 9999;
     width: 100%;
-    background-color: #000000;        
-    bottom: -62vh;
-    height: 26vh;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    background-color: #000000;       
+    height: 30vh;
+    top: 70vh;
+    padding-right: 5%;
+
 
     .photolead {
-      height: 100%; 
-      border-radius: 80px;
+      width: 10%;
+      max-height: 250px;
+      background-color: #fff;
       float: left;
+      position: relative;
+      top: -3vh;
+      margin-left: 5%;
+      margin-right: 2%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+    }
+
+    .infolead {
+      float: left;
+      font-size: 1em;
+      color: #fff;
+      font-weight: regular;
+      width: 83%;
+      position: relative;
+      top: -3vh;
+
+      p {
+        width: 100%;
+        float: left;
+              @media screen and (max-width: $break-lower) {
+                font-size: 0.8em;
+               }
+      }
+    }
+
+    .iconlead {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 1vh;
     }
 
     .texticon {
@@ -339,6 +378,7 @@ height: 35px;
 
       p {
         padding-top: 15px;
+
       }
 
       .icons img {
@@ -986,10 +1026,13 @@ overflow:hidden;
   background-repeat:no-repeat;
   background-size: cover;
   height: 100vh;
-  width: 100vw; 
+  width: 100%; 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: 100% 70%;
+      @media screen and (max-width: $break-low) {
+        background-position: 40% 70%;
+      }
 
 }
 
@@ -1020,42 +1063,23 @@ overflow:hidden;
 // }
 
 .demolead, .demolead:hover {
+  width: 20%;
   font-size: 1.2em;
   color: #fff;
   text-transform: uppercase;
   float: left;
   text-decoration: none;
   text-align: center;
-  margin-top: 3.5vh;
-    @include span-columns(2 of 12);
+
+      @media screen and (max-width: $break-lower) {
+        font-size: 0.8em;
+      }
+
 
   &.omega {
     padding-right: 0;
   }
 
-
-    @media screen and (max-width: $break-h3) {
-        font-size: 1.4em;
-        margin-top: 1.4%;
-      }    
-
-      @media screen and (max-width: $break-medium) {
-        font-size: 1.4em;
-        margin-top: 1.4%;
-      }
-
-      @media screen and (max-width: $break-lower) {
-        font-size: 1em;
-        margin-top: 2.4%;
-      }
-
-      @media screen and (max-width: $break-small) {
-          width: 17%;
-      }
-
-      @media screen and (max-width: $break-smallvile) {
-          width: 17%;
-      }
 
     }
 
@@ -1219,7 +1243,7 @@ margin-left: -1px;
     }
 
     .logocontainer {
-      width: 90%;
+      width: 75%;
       margin: 0 auto;
     }
 

@@ -6037,7 +6037,6 @@ html {
 
 .controls02 {
   position: relative;
-  top: 90vh;
   z-index: 99;
   float: left;
   display: block;
@@ -6046,25 +6045,54 @@ html {
   height: 10vh;
   background-color: #000000;
   opacity: 0.9;
-  padding-left: 60px; }
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   .controls02:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 600px) {
+    .controls02 {
+      display: none; } }
 
 .myLeads {
   position: relative;
   z-index: 9999;
   width: 100%;
   background-color: #000000;
-  bottom: -62vh;
-  height: 26vh;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 5vh;
-  padding-bottom: 5vh; }
+  height: 30vh;
+  top: 70vh;
+  padding-right: 5%; }
   .myLeads .photolead {
-    height: 100%;
-    border-radius: 80px;
-    float: left; }
+    width: 10%;
+    max-height: 250px;
+    background-color: #fff;
+    float: left;
+    position: relative;
+    top: -3vh;
+    margin-left: 5%;
+    margin-right: 2%;
+    overflow: hidden; }
+    .myLeads .photolead img {
+      width: 100%;
+      margin: 0 auto; }
+  .myLeads .infolead {
+    float: left;
+    font-size: 1em;
+    color: #fff;
+    font-weight: regular;
+    width: 83%;
+    position: relative;
+    top: -3vh; }
+    .myLeads .infolead p {
+      width: 100%;
+      float: left; }
+      @media screen and (max-width: 1022px) {
+        .myLeads .infolead p {
+          font-size: 0.8em; } }
+  .myLeads .iconlead {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 1vh; }
   .myLeads .texticon {
     float: left;
     width: 86%;
@@ -6590,45 +6618,27 @@ div.box.swipe {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: 100% 70%; }
+  @media screen and (max-width: 800px) {
+    #lideres {
+      background-position: 40% 70%; } }
 
 .demolead, .demolead:hover {
+  width: 20%;
   font-size: 1.2em;
   color: #fff;
   text-transform: uppercase;
   float: left;
   text-decoration: none;
-  text-align: center;
-  margin-top: 3.5vh;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .demolead:last-child, .demolead:hover:last-child {
-    margin-right: 0; }
-  .demolead.omega, .demolead:hover.omega {
-    padding-right: 0; }
-  @media screen and (max-width: 1300px) {
-    .demolead, .demolead:hover {
-      font-size: 1.4em;
-      margin-top: 1.4%; } }
-  @media screen and (max-width: 1200px) {
-    .demolead, .demolead:hover {
-      font-size: 1.4em;
-      margin-top: 1.4%; } }
+  text-align: center; }
   @media screen and (max-width: 1022px) {
     .demolead, .demolead:hover {
-      font-size: 1em;
-      margin-top: 2.4%; } }
-  @media screen and (max-width: 460px) {
-    .demolead, .demolead:hover {
-      width: 17%; } }
-  @media screen and (max-width: 600px) {
-    .demolead, .demolead:hover {
-      width: 17%; } }
+      font-size: 0.8em; } }
+  .demolead.omega, .demolead:hover.omega {
+    padding-right: 0; }
 
 .bolinha {
   background-color: #fecc0c;
@@ -6750,7 +6760,7 @@ div.box.swipe {
     margin: 0 auto;
     padding-bottom: 5vh; }
   #clientes .logocontainer {
-    width: 90%;
+    width: 75%;
     margin: 0 auto; }
   #clientes .logocliente {
     width: 23%;

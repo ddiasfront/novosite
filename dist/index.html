@@ -196,9 +196,7 @@
           <a class="demolead" onclick="currentDivLead(3)">Fernando Calfat</a>
           <a class="demolead" onclick="currentDivLead(4)">Renato Pereira</a>
           <a class="demolead omega" onclick="currentDivLead(5)">Marcelo Tripoli</a>
-
-
-        </div>
+      </div>
         <div class="lowerlead">
             <div class="leadflex">
                 <img class="right" src="img/ricardo.jpg"><div class="desc right alpha"><p>Ricardo <br/>Calfat </p><hr/><span>VP DE OPERAÇÕES</span></div>
@@ -216,6 +214,17 @@
                <img class="right" src="img/tripoli.jpg"><div class="desc right alpha"><p>Ricardo <br/>Calfat </p><hr/><span>VP DE OPERAÇÕES</span></div>
             </div>
         </div>
+        <div class="myLeads">
+            <div class="photolead"><img src="img/ricardo.jpg" alt=""></div>
+            <div class="infolead">
+              <div class="iconlead"><img class="iconlead" src="img/mail-lead.png" alt=""><img class="iconlead" src="img/in-lead.png" alt=""></div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum sodales vestibulum. Praesent consequat vehicula augue, in aliquet metus. Nullam rhoncus urna magna, a ultrices dui placerat eu. Aliquam a magna magna. Nunc pulvinar pulvinar justo eu luctus. Integer vitae ullamcorper nibh. Etiam eget convallis felis, at vestibulum am tempus ullamcorper. Nam sit amet metus sit amet lorem pha</p>
+            </div>
+        </div>
+        <div class="myLeads"></div>
+        <div class="myLeads"></div>
+        <div class="myLeads"></div>
+        <div class="myLeads"></div>
         <div class="lideresbg">
   
 
@@ -356,8 +365,56 @@
 <script src="main.min.js"></script>
 
 
+<script type="text/javascript">
 
-</script>
+
+  var demolead = $('.demolead').length;
+  var leadIndex = 1;
+
+  showDivslead(leadIndex);
+
+  function avancarlead(m) {
+    if (m == demonum){
+      return;
+    }
+    else {
+       showDivslead(leadIndex += m);
+    }
+   
+  }
+
+  function voltarlead(m) {
+    if (m >= 1) {
+      showDivslead(leadIndex -= m);
+    }
+    else {
+      return;
+    }
+    
+  }
+
+  function currentDivLead(m) {
+    showDivslead(leadIndex = m);
+  }
+
+  function showDivslead(m) {
+    var i;
+    var x = document.getElementsByClassName("myLeads");
+    var dots = document.getElementsByClassName("demolead");
+    if (m > x.length) {leadIndex = 1}
+    if (m < 1) {leadIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace("w3-yellow", "");
+    }
+    x[leadIndex-1].style.display = "block";
+    dots[leadIndex-1].className += " w3-yellow";
+
+  }
+
+  </script>
 
 
 </body>
