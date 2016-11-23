@@ -504,6 +504,7 @@ $(".port04h").hover(function(){
           }
 
           else if ( wtf >= agenciaoffset && wtf <= trabalhosoffset) {
+             $('#trabalhos').show; 
               alllinks.removeClass('active');
               alllinks.children().removeClass('hovered');
               trabalhocrolling.addClass('active');
