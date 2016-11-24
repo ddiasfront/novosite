@@ -6050,7 +6050,7 @@ html {
   justify-content: center; }
   .controls02:last-child {
     margin-right: 0; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     .controls02 {
       display: none; } }
 
@@ -6065,7 +6065,7 @@ html {
   .myLeads .photolead {
     width: 10%;
     max-height: 250px;
-    background-color: #fff;
+    background-color: transparent;
     float: left;
     position: relative;
     top: -3vh;
@@ -6475,7 +6475,6 @@ ul.topnav li.icon {
       color: #fecc0c;
       background-color: #fecc0c;
       border: none;
-      margin-bottom: 20px;
       margin-top: 5px; }
       @media screen and (max-width: 1022px) {
         .videoport .lowerport hr {
@@ -6668,21 +6667,26 @@ div.box.swipe {
   width: 100%;
   height: 100vh;
   background-color: #444; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     .lowerlead {
       display: none; } }
 
 .leadflex {
+  position: relative;
   width: 100%;
   height: 20vh;
   background-color: #131313;
   border: 2px solid #191919;
-  margin-left: -1px; }
+  margin-left: -1px;
+  transition: all 2s ease 0s; }
   .leadflex .desc {
     width: auto;
-    padding-top: 4%; }
+    padding-top: 1%; }
+    @media screen and (max-width: 800px) {
+      .leadflex .desc {
+        padding-top: 4%; } }
     .leadflex .desc p {
-      font-size: 2em;
+      font-size: 1.8em;
       color: #fff;
       text-transform: uppercase; }
       @media screen and (max-width: 600px) {
@@ -6977,5 +6981,61 @@ div.box.swipe {
   @media screen and (max-width: 800px) {
     .bgabsolute {
       display: none; } }
+
+.thetakentast {
+  width: 50%;
+  height: 100%;
+  background-color: #fecc0c;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  left: -60%;
+  transition: all 1s 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #facc1e; }
+  .thetakentast a {
+    display: block; }
+  .thetakentast img {
+    max-width: 80%;
+    margin: 0 auto;
+    height: auto;
+    border: none; }
+    @media screen and (max-width: 600px) {
+      .thetakentast img {
+        max-width: 50%; } }
+
+.thetakentast2 {
+  width: 50%;
+  height: 100%;
+  background-color: #fecc0c;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  right: -60%;
+  transition: all 1s 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #dfb209; }
+  .thetakentast2 a {
+    display: block; }
+  .thetakentast2 img {
+    max-width: 80%;
+    margin: 0 auto;
+    height: auto;
+    border: none; }
+    @media screen and (max-width: 600px) {
+      .thetakentast2 img {
+        max-width: 50%; } }
+
+.thetakentast.what {
+  opacity: 1;
+  left: 0; }
+
+.thetakentast2.what {
+  opacity: 1;
+  right: 0; }
 
 /*# sourceMappingURL=application.css.map */

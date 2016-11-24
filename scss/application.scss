@@ -310,7 +310,7 @@ height: 35px;
     display: flex;
   align-items: center;
   justify-content: center;
-          @media screen and (max-width: $break-smallvile) {
+          @media screen and (max-width: $break-low) {
            display: none;
           }
 
@@ -331,7 +331,7 @@ height: 35px;
     .photolead {
       width: 10%;
       max-height: 250px;
-      background-color: #fff;
+      background-color: transparent;
       float: left;
       position: relative;
       top: -3vh;
@@ -863,7 +863,6 @@ border-bottom: 1px #444 solid;
           color: $yellowc;
           background-color: $yellowc;
           border:none;
-          margin-bottom: 20px;
           margin-top: 5px;
           @media screen and (max-width: $break-lower) {
                  float: left;
@@ -1115,26 +1114,31 @@ overflow:hidden;
   width: 100%;
   height: 100vh;
   background-color: #444;
-        @media screen and (min-width: $break-smallvile) {
+        @media screen and (min-width: $break-low) {
       display: none;
       }
 }
 
 .leadflex {
+  position: relative;
   width: 100%;
   height: 20vh;
   background-color: #131313;
   border: 2px solid #191919;
 margin-left: -1px;
+  transition: all 2s ease 0s;
 
 
 
     .desc {
         width: auto;
-        padding-top: 4%;
+        padding-top: 1%;
+        @media screen and (max-width: $break-low) {
+            padding-top: 4%;;
+            }
 
         p {
-          font-size: 2em;
+          font-size: 1.8em;
           color: #fff;
           text-transform: uppercase;     
           @media screen and (max-width: $break-smallvile) {
@@ -1540,4 +1544,86 @@ margin-left: -1px;
 }
 
 
+.thetakentast {
+width: 50%;
+height: 100%;
+background-color: #fecc0c;
+position: absolute;
+top: 0;
+opacity: 1;
+left: -60%;
+transition: all 1s 0s;
+display: flex;
+justify-content: center;
+align-items: center;
+border-right: 1px solid #facc1e;
+
+a {
+  display: block;
+}
+
+img {
+  
+  max-width: 80%;
+  margin: 0 auto;
+  height: auto;
+  border:none;
+
+
+       @media screen and (max-width: $break-smallvile) {
+           max-width: 50%;
+      }
+
+}
+
+
+}
+
+
+.thetakentast2 {
+width: 50%;
+height: 100%;
+background-color: #fecc0c;
+position: absolute;
+top: 0;
+opacity: 1;
+right: -60%;
+transition: all 1s 0s;
+display: flex;
+justify-content: center;
+align-items: center;
+border-left: 1px solid #dfb209;
+
+
+a {
+  display: block;
+}
+
+
+img {
+  max-width: 80%;
+  margin: 0 auto;
+  height: auto;
+  border:none;
+
+       @media screen and (max-width: $break-smallvile) {
+           max-width: 50%;
+      }
+
+}
+
+}
+
+
+
+  .thetakentast.what {
+    opacity: 1;
+    left: 0;
+  }
+
+
+  .thetakentast2.what {
+    opacity: 1;
+    right:0;
+  }
 
