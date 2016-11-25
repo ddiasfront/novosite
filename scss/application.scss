@@ -40,6 +40,7 @@ ol {
    margin: 0;
   padding: 0;
   font-family: $font-stack;
+  background-color: #000;
 }
 
 html {
@@ -1141,6 +1142,11 @@ margin-left: -1px;
           font-size: 1.8em;
           color: #fff;
           text-transform: uppercase;     
+
+          @media screen and (max-width: $break-lower) {
+            font-size: 1.4em;
+            }
+
           @media screen and (max-width: $break-smallvile) {
             font-size: 1.4em;
             }
@@ -1160,6 +1166,9 @@ margin-left: -1px;
           width: 100%;
           border-color: #fecc0c;        
           @media screen and (max-width: $break-smallvile) {
+            margin: 0;
+            }
+          @media screen and (max-width: $break-lower) {
             margin: 0;
             }
         }
@@ -1626,4 +1635,39 @@ img {
     opacity: 1;
     right:0;
   }
+
+  body {
+  overflow: hidden;
+}
+
+
+/* Preloader */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0b0b0b;
+  /* change if the mask should have another color then white */
+  z-index: 99999999999999999999;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(img/ico-01-home.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
 

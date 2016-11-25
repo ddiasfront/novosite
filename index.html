@@ -2,12 +2,16 @@
 <html>
 <head>
   <title>REF+T - Art&Science</title>
-  <link rel="stylesheet" type="text/css" href="application.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,6z00,600i,700,700i,900,900i" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="application.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,6z00,600i,700,700i,900,900i" rel="stylesheet">
 </head>
 <body data-role="page" class="scroll" >
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+
 <div id="wrapper" class="lazy">
 
   <section id="menumobile" data-fullscreen="true" data-position="fixed">
@@ -18,8 +22,8 @@
       <li><a onclick="myFunction()" href="" class="trabalhoslinkup btnRoll" data-local="trabalhoslinkdown">TRABALHOS</a></li>
       <li><a onclick="myFunction()" href="" class="lidereslinkup btnRoll" data-local="lidereslinkdown">LÍDERES</a></li>
       <li><a onclick="myFunction()" href="" class="clienteslinkup btnRoll" data-local="clienteslinkdown">CLIENTES</a></li>
-      <li><a onclick="myFunction()" href="">VAGAS</a></li>
       <li><a onclick="myFunction()" href="" class="contatolinkup btnRoll" data-local="contatolinkdown">CONTATO</a></li>
+      <li><a onclick="myFunction()" href="">VAGAS</a></li>
 
       <li class="icon">
         <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
@@ -27,9 +31,6 @@
        <div class="currentpage"><img src="img/menu/ico01.gif"/><span></span> </div>
     </ul>
   </section>
-
-
-
     <!-- Sidebar -->
     <section id="desktopmenu">
       <div id="sidebar-wrapper">
@@ -60,14 +61,14 @@
                           <div class="i-menu clientesi"></div><span class="fa fa-anchor solo">CLIENTES</span>
                       </a>
                   </li>
-                  <li class="menu06">
-                      <a href="#">
-                          <div class="i-menu vagasi "></div><span class="fa fa-anchor solo">VAGAS</span>
-                      </a>
-                  </li>
                   <li class="menu07">
                       <a href="#contato" class="contatolinkup btnRoll" data-local="contatolinkdown">
                           <div class="i-menu contatoi btnRoll"></div><span class="fa fa-anchor solo">CONTATO</span>
+                      </a>
+                  </li>
+                  <li class="menu06">
+                      <a href="#">
+                          <div class="i-menu vagasi "></div><span class="fa fa-anchor solo">VAGAS</span>
                       </a>
                   </li>
               </ul>
@@ -364,6 +365,12 @@
 
 
 <script type="text/javascript">
+
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(1500).css({'overflow':'visible'});
+})
 
   var demolead = $('.demolead').length;
   var leadIndex = 1;
