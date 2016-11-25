@@ -1206,8 +1206,16 @@ margin-left: -1px;
     color: #fff;
     line-height: 48px;
 
+           @media screen and (max-width: $break-smallest) {
+                      line-height: 54px;
+        }
+
     img {
       padding-right:10px;
+           @media screen and (max-width: $break-smallest) {
+          padding-right: 5px; 
+          height: 16px;
+        }
     }
 
     span {
@@ -1215,7 +1223,12 @@ margin-left: -1px;
     font-size: 20px;
     padding-bottom: 0;
     padding-top: 0;
-    top: 4px
+    top: 4px;
+           @media screen and (max-width: $break-smallest) {
+
+             top: 3px;    
+             font-size: 14px;
+        }
     }
 }
 
