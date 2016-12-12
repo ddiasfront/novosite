@@ -6616,7 +6616,7 @@ div.box.swipe {
   width: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: 100% 70%; }
+  background-position: 40% 40%; }
   @media screen and (max-width: 800px) {
     #lideres {
       background-position: 40% 70%; } }
@@ -7080,5 +7080,31 @@ body {
   background-position: center;
   margin: -100px 0 0 -100px;
   /* is width and height divided by two */ }
+
+.lead {
+  padding-top: 50px;
+  width: 20%;
+  float: left;
+  font-size: 14px;
+  color: #ffcb0b;
+  text-align: center;
+  position: relative;
+  z-index: 2; }
+  .lead p {
+    margin: 0;
+    font-size: 18px; }
+  .lead span {
+    font-size: 12px;
+    color: #fff; }
+
+.blackblur {
+  width: 100%;
+  position: relative;
+  top: -72px;
+  z-index: 1;
+  background-color: #000;
+  -webkit-box-shadow: 2px 102px 127px 43px rgba(0, 0, 0, 0.95);
+  -moz-box-shadow: 2px 102px 127px 43px rgba(0, 0, 0, 0.95);
+  box-shadow: 2px 102px 127px 43px rgba(0, 0, 0, 0.95); }
 
 /*# sourceMappingURL=application.css.map */
